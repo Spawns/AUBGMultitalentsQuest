@@ -1,0 +1,52 @@
+
+%footer.footer
+  .three.spacing
+  .row.full-width
+    .large-3.medium-3.columns
+      %h1.logo
+        %a= link_to image_tag("footerlogo.png") , root_path
+      .spacing
+    .large-3.medium-3.columns
+      .spacing
+      .links.inline-list
+        %h4
+          Competition
+        %ul
+          %p= link_to  "Agenda" , frontend_agenda_path
+          %p= link_to  "Accommodation" , frontend_accommodation_path
+          %p= link_to  "Rules" , frontend_rules_path
+          %p= link_to  "Competition Documents" , frontend_competition_documents_path
+      .spacing
+    .large-3.medium-3.columns
+      .spacing
+      .links.inline-list
+        %ul
+          %p= link_to "Finalists" , frontend_finalists_path
+          %hr
+          %p= link_to "Supporters" , frontend_partners_path
+          %hr
+          %p= link_to "Contact us" , new_frontend_contact_form_path
+      .spacing
+    .large-3.medium-3.columns
+      .spacing
+        .row
+          .large-12.medium-12.columns
+            .spacing
+            .share-icons.buildingblocks
+              %a{:href => "#{AppConfig.fb_url}"}
+                %img{:alt => "Facebook icon buildingblocks", :src => "https://cdn4.iconfinder.com/data/icons/miu-flat-social/60/facebook-48.png"}/
+              %a{:href => "#{AppConfig.yt_url}"}
+                %img{:alt => "Youtube icon buildingblocks", :src => "https://cdn3.iconfinder.com/data/icons/capsocial-round/500/youtube-48.png"}/
+            .spacing
+      .spacing
+    %hr
+  .row.full-width
+    .large-8.medium-8.columns
+      %p.copywrite.left
+        Copyright © 2016
+      .spacing
+    .large-4.medium-4.columns
+      .spacing
+        %p.copywrite.right
+          Created by Plamen Duchev
+  .two.spacing

@@ -1,0 +1,6 @@
+.row
+  - if @partners_general.count > 0
+    = render 'partners_each' , partners: @partners_general , heading: "Sponsors"
+  -else
+    %h5
+      There are currently no sponsors

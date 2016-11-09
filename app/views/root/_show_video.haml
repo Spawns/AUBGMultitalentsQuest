@@ -1,0 +1,11 @@
+.row
+  %h4
+    =@video.title
+  %h5.subheader
+    =@video.published_at.strftime('%a %d %b %Y')
+  %p
+    =@video.description
+.row
+  .medium-8.columns
+    .flex-video
+      =@video.embed_html.html_safe

@@ -1,0 +1,13 @@
+<% if @partner.errors.any? %>
+    $('#partners').html("<%=escape_javascript(render 'partners') %>");
+    $('#errors').html("<%=escape_javascript(render 'errors') %>")
+    $('#new-partner').html("<%= escape_javascript( render 'form', action: 'new') %>");
+
+<% else %>
+    $('#partners').html("<%=escape_javascript(render 'partners') %>");
+    $('#new-partner').slideUp(350);
+    $('#errors').slideUp(350);
+    $(document).foundation('equalizer', 'reflow');
+
+<% end %>
+

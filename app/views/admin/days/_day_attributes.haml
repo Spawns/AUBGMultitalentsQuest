@@ -1,0 +1,12 @@
+%h3=day.number
+%h5=day.day_date
+- day.events.each do |event|
+  %div
+    ="#{event.start.to_formatted_s(:time)} - #{event.stop.to_formatted_s(:time)}"
+    = event.title
+    = event.description
+%ul.button-group
+  = link_to  "Edit Day" ,edit_admin_day_path(day), :class => "button", remote: true
+  = link_to "Delete Day" , [:admin , day] ,:class => "button", remote: true, method: :delete,  data: { confirm: 'Are you sure?' }
+  .error-list{:id => "errors-#{day.id}"}
+  .edit-form{:id => "id-#{day.id}" }

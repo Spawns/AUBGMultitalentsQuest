@@ -1,0 +1,173 @@
+/* breadcrumbs */
+$primary-color: #0d335f;
+ul.breadcrumbs {
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+
+.ui-datepicker-header {
+  background-color: rgba(235,235,235,1) !important;
+}
+
+* {
+  margin: 0;
+  padding:0;
+}
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: "Roboto Condensed", Arial, sans-serif;
+}
+
+
+
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+.site-footer, .page-wrap:after {
+
+}
+.site-footer {
+  height: 100px;
+  background: rgba(25,25,25,1)
+}
+
+
+
+/*footer end */
+.hidden {
+  display: none
+}
+
+
+
+
+.missing {
+  color: #c60f13;
+  font-size: 1rem;
+}
+
+#access {
+  width: 100%;
+  text-align: center;
+
+}
+
+
+#access .nav-bar {
+  height: auto;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+
+}
+
+.top-bar-section {
+  border-bottom: 1px solid $primary-color;
+  height: 63px;
+}
+
+.top-bar-section ul li{
+  background: #ffffff;
+
+}
+
+.root-link{
+  position: absolute;
+  width: auto;
+  height: 60px;
+  z-index: 999;
+  left: 0;
+  top: 0;
+}
+
+.margin-top-15 {
+  margin-top: 15px;
+}
+
+.notifications {
+  height: 50px;
+}
+
+
+.footer-divider {
+  height: 100px;
+}
+
+/* app process closed */
+
+.centered {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.prohibited-icon {
+  font-size: 40rem;
+
+}
+
+
+//breadcrumbs
+
+.breadcrumbs {
+  margin-top: 1px !important;
+}
+.breadcrumb-container {
+  background: #f4f4f4;
+  width: 100% ;
+  max-height: 30px;
+  min-height: 25px;
+}
+
+
+
+//statuses
+
+
+
+.submit-status {
+  background: #f08a24 !important;
+  color: white !important;
+}
+
+.incomplete-status {
+  background: #f04124 !important;
+  color: white !important;
+}
+
+.success-status {
+  background: #43AC6A !important;
+  color: white !important;
+}
+
+//close modal icon style
+
+.close-icon {
+  font-size: 32px;
+  padding: 5px;
+}
+
+
+//
+.absolute-row {
+  position: absolute;
+  top: 70px;
+  z-index: 999;
+  left:50%;
+
+  .notifications {
+    position: relative;
+    left: -50%;
+
+  }
+}
+
+
+
+//make  distance between the dropdown triangle and the text
+.top-bar-section .has-dropdown > a:after {
+  right: -5px;
+}

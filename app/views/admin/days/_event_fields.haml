@@ -1,0 +1,11 @@
+.row
+  .large-11.large-offset-1.columns.panel.fields
+    %h5 New event
+    .row
+      =builder.input :start , :input_html => { :class  => 'inline-time'}
+      =builder.input :stop , :input_html  => { :class  => 'inline-time'}
+    =builder.input :title
+    =builder.input :description
+    =builder.input :place
+    =builder.hidden_field :_destroy
+    =link_to  "Remove Event" , "#" , :class => 'button tiny alert',  onclick: "removeFields(this); return false;" 

@@ -1,0 +1,49 @@
+<script>
+
+  $(document).ready( function() {
+    var element = "#timer" ;
+    var year = <%= conf_start("year") %> ;
+    var month = <%= conf_start("month") %> - 1 ;
+    var day = <%= conf_start("day") %> ;
+     setCountdownTimer(element, year, month, day);
+  
+
+  });
+
+  function setCountdownTimer(element, year, month, day) {
+  var date = new Date(year, month, day);
+  $(element).countdown({until: date ,  format: 'dHMS'});
+  }
+
+
+</script>
+<!--[if lt IE 9]>
+<script>
+    document.createElement('video');
+</script>
+<![endif]-->
+
+<div class="videowrapper">
+  <div class="row">
+    <div id="timewrapper" >
+      <div class="timer-content">
+        <h5 class="text-center" > COMPETITION COUNTDOWN </h5>
+        <hr class="small">
+        <div id="timer">
+        </div>
+        <div> <%= link_to "APPLY NOW" , new_user_registration_path, :class => "timer-sign-link text-center" %> </div>
+      </div>
+    </div>
+  </div>
+  <div class="timer-video">
+    <video loop autoplay muted id="bgvid">
+      <source src='<%=  video_path("timer_video.mp4")  %>'  type="video/mp4">
+    </video>
+  </div>
+</div>
+
+
+
+
+
+

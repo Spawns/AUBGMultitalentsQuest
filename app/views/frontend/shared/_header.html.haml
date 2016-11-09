@@ -1,0 +1,51 @@
+%div{:class=> ("sticky" unless !active?(root_path))}
+  %nav.top-bar{"data-topbar" => "", :role => "navigation" , :id => "access"}
+    %ul.title-area{ :style => 'z-index:999;'}
+      %li.name
+        %h1
+          = link_to image_tag("logo.png") , root_path
+      %li.toggle-topbar.menu-icon
+        %a{:href => "#"}
+          %span Menu
+    %section.top-bar-section
+      %ul.nav-bar
+        -#%li.has-dropdown
+        -#  = link_to "Competition #{conf_start('year')}" , "#"
+        -#  %ul.dropdown
+        %li
+          = link_to  "Rules" , frontend_rules_path
+        %li
+          = link_to  "Agenda" , frontend_agenda_path
+        %li
+          = link_to  "Accommodation" , frontend_accommodation_path
+        %li
+          = link_to  "Documents" , frontend_competition_documents_path
+        %li
+          = link_to "Finalists" , frontend_finalists_path
+        %li
+          = link_to "Sponsors" , frontend_partners_path
+        %li
+          = link_to "Contact" , new_frontend_contact_form_path
+
+
+      %ul.right
+        %li.divider
+        %li
+          - if user_signed_in? && !current_user.application.nil? && current_user.application.id
+            %li
+              = application_complete?
+          - else
+            - if  user_signed_in?
+              %li.active
+                =link_to  "Apply now"  , application_process_create_application_path
+
+          - if user_signed_in?
+            %li.divider
+            %li
+              = link_to "Log out" , destroy_user_session_path ,  { :method => :delete }
+          - else
+            %li
+              = link_to "Sign in"  , new_user_session_path
+            %li.active
+              =link_to  "Apply now"  , new_user_registration_path
+        %li.divider

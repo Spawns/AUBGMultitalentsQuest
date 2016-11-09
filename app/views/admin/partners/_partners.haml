@@ -1,0 +1,6 @@
+%ul
+- if @partner_partners.empty?
+  %h5="Your have no sponsors"
+- else
+  - @partner_partners.each do |partner|
+    = render 'admin/partners/partner_attributes' , partner: partner

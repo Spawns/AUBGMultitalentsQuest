@@ -1,0 +1,20 @@
+
+
+.row
+  - if app_config.errors.any?
+    %ul
+      = app_config.errors.full_messages.each do |error|
+        %li= error
+
+
+  = simple_form_for [ :admin , app_config]   do |f|
+    = f.input :tos , label: "Terms of Service"
+    = f.button :submit ,  "Update Terms of Service"
+
+
+
+
+
+
+
+

@@ -1,0 +1,78 @@
+// Place all the styles related to the days controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.new-day {
+  display:none;
+}
+
+.day-container{
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+.day-container ul{
+  margin: 0;
+  padding-bottom: 2rem;
+}
+
+.day-container li{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.inline-time {
+  width: 40%;
+}
+
+.colored {
+  background-color: rgba(235,235,235,1);
+  margin-top: 10px;
+}
+
+
+#new_day {
+  border-top: 2px solid rgba(235,235,235,1);
+  border-bottom: 2px solid rgba(235,235,235,1);
+  padding: 5px 0 5px 0;
+}
+
+
+.day {
+  color: black;
+  padding: 5px;
+  text-align: center;
+}
+
+.day-num {
+  text-align: center;
+  padding-right: 10px;
+}
+
+
+.event-name {
+  display: inline;
+}
+
+
+
+.day-events {
+  list-style-type: none;
+  display: none;
+  padding-left: 2rem;
+  font-size: 1rem;
+}
+
+.event-time {
+  padding-left: 1rem;
+  display: inline;
+  padding-right: 10px;
+}
+
+.day-date {
+  color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+  vertical-align: middle;
+}

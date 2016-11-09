@@ -1,0 +1,31 @@
+= content_for :sidebar do
+  = render 'frontend/shared/conference_sidebar_items'
+= content_for :sidebar_title do
+  Finalists Menu
+.row.full-width.page-bgimage{:id => 'finalists-page-bg'}
+  %h2.conference-heading
+    Finalists
+.row{:style => "margin-bottom: 8px;"}
+  .large-12.columns
+    %h2.page-heading
+      =@title
+    - if @finalists
+      - @finalists.each_slice(4) do |group|
+        .row.org-group
+          - group.each do |finalist|
+            .large-3.columns
+              .large-12.columns.profile-container
+                .circular-sm{ :style => " background: url( #{finalist.photo.url(:thumb)} )"}
+                %h5.text-center=finalist.name
+                = link_to  '' , frontend_finalist_path(id: finalist.id) , :remote => 'true'  , :class => 'organizer-link'  , :data => {'reveal-id' => "myModal"}
+    - else
+      .row.org-group
+        .large-3.columns
+          %h2
+            No information
+
+
+#myModal.reveal-modal{:class => "[expand, xlarge, large, medium, small]", :data =>{ 'reveal' => true}}
+  %a.close-reveal-modal
+    %i.fi-x.close-icon
+  #inside-modal

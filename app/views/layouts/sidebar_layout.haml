@@ -1,0 +1,35 @@
+!!!
+%html{:lang => "en"}
+  %head
+    = favicon_link_tag 'favicon.ico'
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    = stylesheet_link_tag    "application"
+    = javascript_include_tag "vendor/modernizr"
+    = javascript_include_tag "sidebar_layout"
+    = csrf_meta_tags
+    = display_meta_tags( :site => "Liberal Arts Competition", :keywords => app_keywords , :description => app_description , :og => { :title    => "Liberal Arts Competition" , :description => app_description  , :image => image_url("h.png")})
+
+    %link{:href => "//fonts.googleapis.com/css?family=Roboto+Condensed:300italic,300,400italic,400,700italic,700", :rel => "stylesheet", :type => "text/css"}
+  %body
+    .page-wrap
+      .off-canvas-wrap{:data => {'offcanvas' => true}}
+        .inner-wrap
+          %aside.left-off-canvas-menu.show-for-small-only
+            = yield :sidebar
+          = render "frontend/shared/header"
+          = breadcrumbs_partial
+          = render 'users/shared/devise_notification'
+          %a.left-off-canvas-toggle.menu-icon.show-for-small-only{:href => "#"}
+            .button.sidebar-menu-btn
+              %i{:class=> "fi fi-list"}
+              %span
+                =yield :sidebar_title
+          .row.full-width.collapse{:data=>{'equalizer' => true}}
+            .medium-3.columns.conference-side-nav.show-for-small-up.hide-for-small-only{:data=>{'equalizer-watch'=> true}}
+              = render "frontend/shared/sidebar"
+            .medium-9.columns{:data=>{'equalizer-watch'=> true}}
+              = yield
+
+          = render "frontend/shared/footer"
+

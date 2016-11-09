@@ -1,0 +1,15 @@
+.large-12.columns
+  %ul
+  - if @documents.empty?
+    %h5 You do not have any competition documents uploaded
+  - else
+    - @documents.each_slice(4) do |group|
+      .row.file-group
+        - group.each do |document|
+          .large-3.columns
+            .file-contain
+              =link_to image_tag( "file.svg") , document.document.url
+              %h4= document.name
+              %p= document.description
+              = link_to "Delete Document" , [:admin, document] , remote: true, method: :delete,  data: { confirm: 'Are you sure?' } ,  :class => "button expand small"
+

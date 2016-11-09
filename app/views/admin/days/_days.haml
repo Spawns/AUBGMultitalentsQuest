@@ -1,0 +1,9 @@
+.large-12.columns
+  %ul
+  - if @days.empty?
+    %h5 Your conference agenda is empty.
+  - else
+    - @days.each do |day|
+      = render 'admin/days/day_attributes' , day: day
+
+

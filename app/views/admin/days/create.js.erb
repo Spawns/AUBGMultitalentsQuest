@@ -1,0 +1,12 @@
+<% if @day.errors.any? %>
+$('#days').html("<%=escape_javascript(render 'days') %>");
+$('#errors').html("<%=escape_javascript(render 'errors') %>")
+$('#new-day').html("<%= escape_javascript( render 'form' ) %>");
+
+<% else %> 
+$('#days').html("<%=escape_javascript(render 'days') %>");
+$('#new-day').slideUp(350);
+$('#errors').slideUp(350);
+$(document).foundation('equalizer', 'reflow');
+
+<% end %>

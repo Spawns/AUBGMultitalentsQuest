@@ -1,0 +1,70 @@
+// Place all the styles related to the organizers controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#finalists-page-bg {
+  background: image-url("ABF_Gradiant.JPG");
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 370px;
+}
+
+.circular-big {
+  width: 224px;
+  height: 224px;
+  border-radius: 112px;
+  -webkit-border-radius: 112px;
+  -moz-border-radius: 112px;
+  margin: 0 auto;
+  text-align: center;
+  }
+
+.circular-sm {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 10px
+
+}
+
+.bio-container { 
+  text-align: justify;
+}
+
+.profile-container {
+  background-color: rgba(235,235,235,1);
+  margin-top: 15px;
+}
+
+.organizer-link {
+  position:  absolute;
+  cursor: pointer;
+  display: block;
+  top:0 ;
+  bottom:0;
+  left: 0 ; 
+  right: 0;
+ }
+
+ .org-title {
+   margin-top: 0 !important;
+   border-bottom: 2px solid #008CBA ;
+   color: rgba(175,175,175,1)
+ }
+
+ .org-name {
+  margin-bottom: 0 !important;
+ }
+
+ .org-group .large-3:last-of-type {
+  float: left !important;
+
+ }

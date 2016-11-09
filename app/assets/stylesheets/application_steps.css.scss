@@ -1,0 +1,118 @@
+// Place all the styles related to the application_steps controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+$header-font-family:  "Roboto Condensed" ,"Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$primary-color: #0d335f;
+//legend
+legend {
+  font-weight: 300 !important;
+}
+//datepicker
+.ui-datepicker-next {
+  float: right;
+}
+
+.ui-datepicker-prev {
+  float: left;
+  clear: both;
+}
+.ui-datepicker-prev ,  .ui-datepicker-next  {
+  padding: 1px ;
+  color: white;
+  background-color: $primary-color;
+  margin: 3px;
+}
+.ui-datepicker-prev:hover , .ui-datepicker-next:hover  {
+  color: white;
+  opacity: 0.8;
+}
+.ui-datepicker-month {
+  display: block;
+  text-align: center;
+
+}
+
+
+.circlenumber {
+  background-color: #fff;
+  border-radius: 50%;
+  border: 1px solid  $primary-color;
+  position: relative;
+  -webkit-transition: all 500ms;
+  transition: all 250ms;
+  &:hover {
+    border: 5px solid $primary-color;
+  }
+  h3 {
+    line-height: 1px;
+    color: #0b4f69;
+    position: relative;
+    text-align: center;
+    font-weight: normal;
+  }
+}
+
+
+.active-class {
+  .circlenumber {
+    background: $primary-color;
+    h3 {
+      color: white;
+    }
+  }
+}
+
+/* Circle Style Two Mobile */
+
+@media only screen and (min-width: 40em) {
+  .step-by-step-style-two {
+    .circlenumber {
+      width: 80px;
+      height: 80px;
+      margin: 30px auto 15px auto;
+      h3 {
+        padding-top: 35px;
+        font-size: 20px;
+      }
+    }
+    h5 {
+      text-align: center;
+      color: $primary-color;
+      font-size: 0.85rem !important;
+    }
+  }
+}
+
+/* Circle Style Two Medium and Large */
+
+@media only screen and (min-width: 0) and (max-width: 40em){
+  .step-by-step-style-two {
+    .path-item {
+      padding-left:55px;
+      position: relative;
+
+      .circlenumber {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        margin-top: 6px;
+        left: 0;
+        h3 {
+          padding-top: 15px;
+          font-size: 16px;
+        }
+      }
+      h5 {
+        text-align: center;
+        color: $primary-color;
+        font-size: 0.95rem !important;
+      }
+    }
+  }
+}
+
+//letter and previous experience text length validators
+
+#previous_experience_symbols , #motivational_letter_symbols {
+  color: $primary-color;
+}

@@ -1,0 +1,97 @@
+
+=image_tag "header.png" , :class=>'parallax-background'
+
+.parallax-content
+  %ul.slider-orbit{"data-options" => "animation:slide; slide_number: false; pause_on_hover:false; animation_speed:500; navigation_arrows:true; bullets:false; animation_speed: 0,","data-orbit" => ""}
+    - (1..3).each do |i|
+      %li{:style => "background: url(/assets/IMG#{i}.jpg)"}
+        .row.collapse.full-width.whatis-container
+          .large-6.columns
+          .large-6.columns.whatis
+            %h2 What is Liberal Arts?
+            %hr.small
+            %p.wow.fadeInLeft
+              Liberal arts is a unique system of education popular in America. In the liberal arts system,
+              you study a variety of disciplines (for example sciences, arts, history, economics, business)
+              while at the same time achieving an in-depth knowledge in the field of your chosen major(s).
+              Liberal arts students have the  freedom to choose areas of study, professors and curriculum;
+              small class sizes and close interaction between student and faculty is the norm. In a liberal
+              arts setting, the residential campus and rich and varied choice of extracurricular activities
+              are particularly important.
+  .row.collapse.full-width{:data=>{'equalizer' => true}}
+    .large-6.columns.news-section{:data=>{'equalizer-watch'=> true}}
+      %h2.landing-page-heading#news.features.wow.fadeInleft
+        Facebook News
+      .large-12.columns.news-container
+        - @posts.each do |post|
+          .news-item.wow.slideInLeft
+            %a{:href => "https://www.facebook.com/AUBGcurious/posts/#{post['id'].slice(16..-1)}"}
+              -if post['message']
+                %h6
+                  %small
+                    =DateTime.parse(post['created_time']).strftime('%a %d %b %Y')
+                %p
+                  =post['message']
+    .large-6.columns{:data=>{'equalizer-watch'=> true}}
+      %h2.landing-page-heading#videos.features.wow.fadeInRight
+        Videos
+      - @videos.each do |video|
+        .image-wrapper.overlay-fade-in
+          =image_tag( video.thumbnail_url.gsub('default.jpg' , 'maxresdefault.jpg'))
+          .image-overlay-content
+            %i.fi-play
+            %h2=video.title
+            =link_to '', show_video_path(video.id) , :remote => 'true' , :class=>'image-wrapper-link'
+  .row.collapse.full-width.social-container
+    .large-10.columns.left.social-text
+      %span
+        AUBG MULTITALENTS QUEST IS
+        %strong SOCIAL
+    .large-2.columns.right
+      .share-icons.buildingblocks
+        %a{:href => "#{AppConfig.fb_url}" , :class=>"wow slideInLeft" }
+          %img{:alt => "Facebook icon buildingblocks", :src => "https://cdn4.iconfinder.com/data/icons/miu-flat-social/60/facebook-64.png", :class=>"wow slideInLeft"}/
+        %a{:href => "#{AppConfig.yt_url}"}
+          %img{:alt => "Youtube icon buildingblocks", :src => "https://cdn3.iconfinder.com/data/icons/capsocial-round/500/youtube-64.png", :class=>"wow slideInLeft"}/
+  .landing-timer
+    = render 'timer'
+
+
+-#used for the video player
+#video-modal.reveal-modal{:class => "[expand, xlarge, large, medium, small]", :data =>{ 'reveal' => true}}
+  %a.close-reveal-modal
+    %i.fi-x.close-icon
+  #inside-modal
+
+-#used to direct users with short screens
+.down-arrow {
+
+
+}
+
+:javascript
+  $('#slider-orbit').foundation({
+    orbit: {
+      animation: 'slide', // Sets the type of animation used for transitioning between slides, can also be 'fade'
+      timer_speed: 50, // Sets the amount of time in milliseconds before transitioning a slide
+      pause_on_hover: false, // Pauses on the current slide while hovering
+      resume_on_mouseout: true, // If pause on hover is set to true, this setting resumes playback after mousing out of slide
+      animation_speed: 50, // Sets the amount of time in milliseconds the transition between slides will last
+      stack_on_small: false,
+      navigation_arrows: false,
+      slide_number: false,
+      slide_number_text: 'of',
+      container_class: 'orbit-container',
+      stack_on_small_class: 'orbit-stack-on-small',
+      slides_container_class: 'orbit-slides-container', // Class name given to the slides container
+      caption_class: 'orbit-caption', // Class name given to the caption
+      active_slide_class: 'active', // Class name given to the active slide
+      orbit_transition_class: 'orbit-transitioning',
+      bullets: false, // Does the slider have bullets visible?
+      timer: false, // Does the slider have a timer visible?
+      variable_height: false, // Does the slider have variable height content?
+      swipe: true,
+      before_slide_change: noop, // Execute a function before the slide changes
+      after_slide_change: noop // Execute a function after the slide changes
+    }
+  });

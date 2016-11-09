@@ -1,0 +1,5 @@
+- if @partner.errors.any?
+  %ul
+    - @partner.errors.full_messages.each do |error|
+      %li{:data =>{ 'alert' => true} , :class => 'alert-box alert'}
+        =error

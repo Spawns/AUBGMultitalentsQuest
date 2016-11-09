@@ -1,0 +1,21 @@
+= javascript_include_tag "//www.google.com/jsapi"
+.row
+  %h3
+    Applications
+  .large-6.columns
+    %h4 Status
+    = pie_chart Application.group(:status).count
+  .large-6.columns
+    %h4 Learned from
+    = pie_chart Application.group(:learned_from).count
+.row
+  .large-6.columns
+    %h4 Birth city of the accepted applicants
+    = pie_chart Application.group(:city).count
+  .large-6.columns
+    %h4 Gender of the accepted applicants
+    = pie_chart Application.accepted.group(:gender).count
+.row
+  .large-12.columns
+    %h4 Registration activity
+    = line_chart User.group_by_day(:created_at).count

@@ -1,0 +1,10 @@
+= simple_form_for [:admin, @partner] , :html => { :multipart => true }, :remote => true   do |f|
+  %h4
+    = action.capitalize
+    Supporter
+  = f.input :name, as: :string
+  = f.input :link , :input_html => { :class => 'large-4 columns' }
+  - if action == 'edit'
+    =image_tag @partner.logo
+  = f.input :logo, as: :file
+  = f.button :submit ,  action=='new' ? 'Add' : 'Update' , :class => "button expand"

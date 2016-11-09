@@ -1,0 +1,15 @@
+<% if @partner.errors.any? %>
+$('#partners').html("<%=escape_javascript(render 'partners') %>");
+$("#errors-<%= @partner.id %>").html("<%=escape_javascript(render 'errors') %>");
+$("#id-<%= @partner.id%>").html("<%= escape_javascript( render 'form' , action: 'edit' ) %>");
+
+
+<% else %>
+
+$("#id-<%= @partner.id%>").slideUp(350);
+$("#errors-<%= @partner.id%>").slideUp(350);
+$('#partners').html("<%=escape_javascript(render 'partners') %>");
+
+
+<% end %>
+

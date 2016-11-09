@@ -1,0 +1,48 @@
+.row
+  .large-12.columns
+    %h2.page-heading
+      Application status
+.row
+  %dl.tabs.vertical{"data-tab" => ""}
+    %dd.active
+      %a{:href => "#panel1"} General information
+    %dd
+      %a{:href => "#panel2"} Educational Information
+    %dd
+      %a{:href =>"#panel3"} Personal questions
+    -#%dd
+    -#  %a{:href =>"#panel4"} YouTube CV
+  .tabs-content.vertical
+    #panel1.content.active
+      %ul.application-show-list
+        =render 'show_field' , :attrib => @application.name , :attrib_name => "Name"
+        =render 'show_field' , :attrib => @application.gender , :attrib_name => "Gender"
+        =render 'show_field' , :attrib => @application.dob , :attrib_name => "Date of Birth"
+        =render 'show_field' , :attrib => @application.mobile_phone , :attrib_name => "Mobile Phone"
+        =render 'show_field' , :attrib => @application.current_address , :attrib_name => "Address"
+        =render 'show_field' , :attrib => @application.city , :attrib_name => "City"
+    #panel2.content
+      %ul.application-show-list
+        =render 'show_field' , :attrib => @application.school , :attrib_name => "School"
+        =render 'show_field' , :attrib => @application.school_town , :attrib_name => "School town"
+        =render 'show_field' , :attrib => @application.school_municipality , :attrib_name => "School municipality"
+        =render 'show_field' , :attrib => @application.school_region , :attrib_name => "School region"
+        =render 'show_field' , :attrib => @application.high_school_grade , :attrib_name => "High school grade"
+        %li=image_tag @application.gradebook_photo.url(:medium)
+    #panel3.content
+      %ul.application-show-list
+        %li=image_tag @application.photo.url(:medium)
+        %p
+          =render 'show_field' , :attrib => @application.favourite_subject , :attrib_name => "What are your favorite school subjects and why?"
+        %p
+          =render 'show_field' , :attrib => @application.self_describe , :attrib_name => "Describe yourself in three words."
+    -##panel4.content
+    -#  %ul.application-show-list
+    -#    =render 'show_field' , :attrib => @application.yt , :attrib_name => "YouTube CV"
+.row
+  %hr
+  .medium-2.columns.push-left
+    = link_to( raw("<i class='fi-page-edit'></i> Edit application"), application_process_edit_application_path , :class => "button expand")
+  - if application_check
+    .medium-2.columns.push-left.floatit_left
+      = link_to raw("<i class='fi-upload'></i> Submit Application") , submit_application_process_applications_path , :class => "button success expand large"

@@ -1,0 +1,282 @@
+// Place all the styles related to the pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+$primary-color: #0d335f;
+
+
+
+.row{
+  &.full-width{
+    max-width: 100% !important;
+    .row{
+      margin: 0 auto;
+      max-width: 62.5rem;
+      background: inherit;
+    }
+
+  }
+}
+//page headings
+
+
+
+.conference-heading {
+  padding: 35px;
+  font-weight: 300;
+  color: white;
+  background: rgba(48,101,155,0.5);
+  text-transform: uppercase;
+  font-size: 3rem;
+  margin: 0 auto;
+  display: block;
+}
+
+
+.page-heading {
+  padding: 15px;
+  font-weight: 300;
+  text-transform: uppercase;
+  border-bottom: 2px solid rgba(235,235,235,1)
+
+}
+
+
+
+
+.page-heading-large {
+  background: $primary-color;
+  margin-top: 0;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 2.3rem;
+}
+
+//side-nav
+
+.sidebar-menu-btn {
+  margin: 0;
+}
+.sidebar-active {
+  background: #d9d9d9;
+  a{
+    i {
+      color: $primary-color !important;
+    }
+    h4  {
+      color: $primary-color !important;
+    }
+    h5 {
+      color: $primary-color !important;
+    }
+  }
+
+}
+
+.sidebar-lg {
+  position:fixed;
+  width:25%;
+}
+
+.conference-side-nav {
+  position: relative;
+}
+
+.conference-side-nav, .left-off-canvas-menu {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  border-right: 1px solid $primary-color;
+
+  background: $primary-color;
+  h3 {
+    margin: 0;
+    padding: 15px;
+    color: white;
+    font-weight: 300;
+
+  }
+
+  ul {
+    z-index: 50;
+    width: 100%;
+    position: relative;
+    li {
+      text-align: left;
+      font-size: 1.5rem;
+      color: white;
+      i {
+        color: white;
+        float: left;
+        font-size: 30px;
+      }
+      h5 {
+        color: white;
+        display: inline;
+        padding: 10px 0 10px 10px;
+
+      }
+      h4 {
+        color: white;
+        display: inline;
+        padding: 10px 0 10px 10px;
+      }
+    }
+
+  }
+}
+
+
+
+
+
+
+// contact page map
+#map {
+  width: 700px;
+  height: 430px;
+}
+
+
+//breadcrumbs
+
+.breadcrumbs {
+  margin-top: 1px !important;
+}
+.breadcrumb-container {
+  background: #f4f4f4;
+  width: 100% ;
+  max-height: 30px;
+  min-height: 25px;
+}
+
+
+//images for the conference pages
+.no-margin {
+  margin: 0 !important;
+  width: 100%
+}
+#agenda-page-bg {
+  background: image-url("page-agenda.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 370px;
+}
+
+#rules-page-bg {
+    background: image-url("page-rules.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  height: 370px;
+}
+
+#documents-page-bg {
+   background: image-url("page-documents.jpg");
+ background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 370px;
+
+ }
+
+#accommodation-page-bg {
+  background: image-url("page-accommodation.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 370px;
+}
+
+
+//partners images
+.partner-overlay-fade-in {
+
+
+  img {
+    width: auto;
+    max-height: 166px;
+    vertical-align: middle;
+    position: relative;
+    transition: all 0.2s linear;
+  }
+
+  .partner-image-overlay-content {
+    opacity: 0;
+    background-color: rgba(48,101,155,0.4);
+    transition: all 0.4s ease-in-out;
+    position: absolute;
+    bottom: 0;
+  }
+
+  h2 {
+    color: #f2f2f2;
+    font-size: 1.3rem;
+    margin: 0;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 300;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+    background: rgba(48,101,155,0.7);
+
+  }
+
+  a {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left:0;
+    right: 0;
+  }
+
+  &:hover img {
+    transform: scale(1.2);
+    width: auto;
+    max-height: 166px;
+    vertical-align: middle;
+    position: relative;
+  }
+
+  &:hover .partner-image-overlay-content {
+    opacity: 1;
+  }
+
+  &:hover h2, p{
+    opacity: 1;
+  }
+
+  &:hover p {
+    transition-delay: 0.1s;
+  }
+}
+.partner-image-wrapper{
+  width: auto;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  height: 166px;
+  margin-bottom: 1rem;
+}
+.partner-image-overlay-content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0
+}

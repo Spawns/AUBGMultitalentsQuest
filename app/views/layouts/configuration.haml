@@ -1,0 +1,21 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %title= content_for?(:title) ? yield(:title) : "Liberal Arts"
+    = stylesheet_link_tag    "admin/admin_application"
+    = javascript_include_tag "vendor/modernizr"
+    = javascript_include_tag "configuration"
+    = csrf_meta_tags
+  %body
+
+    .off-canvas-wrap{"data-offcanvas" => ""}
+      .inner-wrap{:id=>'wrap'}
+        = render 'admin/shared/header'
+        .row.full-width{:data=>{'equalizer' => "col"}}
+          .large-3.small-3.columns.show-for-large-up.admin-menu-lg{:data=>{'equalizer-watch'=> "col"}}
+            =render 'admin/shared/menu_items'
+          .large-9.small-9.columns.margin-top-15{:data=>{'equalizer-watch'=> "col"}}
+            .row{style: "padding:15px"}
+            = yield

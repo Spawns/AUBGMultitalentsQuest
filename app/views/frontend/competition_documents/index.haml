@@ -1,0 +1,17 @@
+= content_for :sidebar do
+  = render 'frontend/shared/conference_sidebar_items'
+= content_for :sidebar_title do
+  "Conference Menu"
+.row.full-width.page-bgimage{:id => 'documents-page-bg'}
+  %h2.conference-heading
+    Conference Documents
+.row
+  -@documents.each_slice(4) do |group|
+    .row.file-group
+      -group.each do |document|
+        .large-3.columns
+          .file-contain
+            =link_to " " ,  document.document.url , :class => "link-to-file"
+            =image_tag( "file.svg")
+            %h4= document.name
+            %p= document.description

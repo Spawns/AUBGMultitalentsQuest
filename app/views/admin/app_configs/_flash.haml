@@ -1,0 +1,6 @@
+-# Used to verify the administrator's password
+-if flash[:notice]
+  .alert-box{"data-alert" => ""}
+    = flash[:notice]
+    %a.close{:href => "#"} x
+

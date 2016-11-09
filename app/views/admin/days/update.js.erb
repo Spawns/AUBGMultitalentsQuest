@@ -1,0 +1,13 @@
+<% if @day.errors.any? %>
+$('#days').html("<%=escape_javascript(render 'days') %>");
+$("#errors-<%= @day.id %>").html("<%=escape_javascript(render 'errors') %>")
+$("#id-<%= @day.id%>").html("<%= escape_javascript( render 'form', action: 'edit'  ) %>");
+
+<% else %>
+$("#id-<%= @day.id%>").slideUp(350);
+$("#errors-<%= @day.id %>").slideUp(350);
+$('#days').html("<%=escape_javascript(render 'days') %>");
+
+
+
+<% end %>

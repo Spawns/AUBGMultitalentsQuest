@@ -1,0 +1,44 @@
+// Place all the styles related to the conference_documents controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#new-document {
+  border-top: 2px solid rgba(235,235,235,1);
+  border-bottom: 2px solid rgba(235,235,235,1);
+  padding: 5px 0 5px 0;
+  display: none;
+}
+
+.file-contain {
+  margin-bottom: 8px;
+  margin-top: 8px;
+  text-align: center;
+  border: 1px solid rgba(235,235,235,1);
+}
+
+.file-contain img {
+  padding: 30px;
+}
+
+.file-contain .link-to-file {
+    bottom: 0;
+    cursor: pointer;
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0
+}
+.file-contain .button {
+  padding: 0;
+  margin: 0;
+}
+
+.file-contain p {
+
+}
+
+ .file-group .large-3:last-of-type {
+  float: left !important;
+
+ }

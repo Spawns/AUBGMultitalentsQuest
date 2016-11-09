@@ -1,0 +1,8 @@
+.row
+  = link_to "New day" , new_admin_day_path , :remote => "true" , :class => "button"
+  #errors
+  #new-day
+
+.row
+  #days
+    = render 'days' 

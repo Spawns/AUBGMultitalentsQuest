@@ -1,0 +1,12 @@
+.row
+  .medium-2.small-4.columns
+    %h3=image_tag partner.logo
+  .medium-10.small-7.columns
+    %h2=partner.name
+    %h3=partner.link
+    .row
+      %ul.button-group
+        = link_to  "Edit" ,edit_admin_partner_path(partner), :class => "button", remote: true
+        = link_to "Delete" , [:admin , partner] , :class => "button", remote: true, method: :delete,  data: { confirm: 'Are you sure?' }
+        .error-list{:id => "errors-#{partner.id}"}
+        .edit-form{:id => "id-#{partner.id}"  ,:data=>{'equalizer-watch'=> "list"}}

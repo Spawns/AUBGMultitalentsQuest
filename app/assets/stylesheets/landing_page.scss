@@ -1,0 +1,357 @@
+$primary-color: #0d335f;
+/* landing header */
+.slider-orbit{
+  li{
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+    background-size: cover !important;
+  }
+}
+
+.whatis-container {
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+
+.parallax-background {
+  height: auto;
+  width: 100%;
+  position: fixed;
+  display: block;
+}
+
+.intro-text {
+  font-size: 50px;
+  color: #fff;
+  text-align: center;
+  margin-top: 15%;
+}
+.parallax-content {
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
+  background: #fff;
+}
+
+
+/* landing timer */
+.videowrapper {
+  position: relative;
+  width: 100%;
+  height: 700px;
+}
+
+
+
+
+.timer-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height:100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+#bgvid {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+}
+
+
+#timer {
+  height: 60px;
+}
+
+
+
+#timewrapper {
+  position: absolute;
+  color: white;
+  width: 50%;
+  height: 50%;
+  overflow: auto;
+  margin: auto;
+  top: 325px; left: 0; bottom: 0; right: 0;
+  z-index: 10;
+
+  .is-countdown {
+    background-color: transparent !important;
+    border: none !important;
+    font-size: 2rem;
+  }
+
+  h5 {
+    padding-top: 10px;
+    color: #fff;
+    font-weight:300;
+    font-size:2rem;
+
+  }
+
+  .timer-content {
+    background-color : rgba(48,101,155,0.7);
+  }
+
+
+  .timer-sign-link {
+    display: block;
+    margin: 0 auto;
+    font-weight: 400;
+    padding: 5px;
+    color: white;
+  }
+
+  .timer-sign-link:hover {
+    color: white;
+  }
+}
+
+
+
+
+.wh
+  /* IE 8 backwards compatibility */
+video { display: block; }
+
+/* mobile */
+
+@media screen and (max-width: 724px) {
+  .videowrapper {
+    background: image-url("countdown.jpg") no-repeat center center fixed;
+  }
+  #bgvid {
+    display: none;
+  }
+
+  #timewrapper .is-countdown {
+    background-color: transparent !important;
+    border: none !important;
+    font-size: 0.85rem;
+  }
+
+}
+//yotubue videos
+.image-wrapper {
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  max-height:300px;
+}
+
+
+.image-overlay-content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0
+}
+
+// modifier classes
+
+.overlay-fade-in {
+
+
+  img {
+    transition: all 0.2s linear;
+  }
+
+  .image-overlay-content {
+    opacity: 0;
+    background-color: rgba(48,101,155,0.4);
+    transition: all 0.4s ease-in-out;
+  }
+
+  h2 {
+    color: #f2f2f2;
+    font-size: 1.8rem;
+    margin-top: 5%;
+    font-weight: 300;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+    background: rgba(48,101,155,0.7);
+  }
+
+  a {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left:0;
+    right: 0;
+  }
+  i {
+    font-size: 4rem;
+    color: white;
+    display: block;
+    margin-top: 10%;
+  }
+
+
+  &:hover img {
+    transform: scale(1.2);
+  }
+
+  &:hover .image-overlay-content {
+    opacity: 1;
+  }
+
+  &:hover h2, p, i {
+    opacity: 1;
+  }
+
+  &:hover p {
+    transition-delay: 0.1s;
+  }
+
+  &:hover .button {
+    transition-delay: 0.2s;
+  }
+}
+
+
+//news section
+.news-container {
+  padding-left: 50px;
+  padding-right:50px;
+}
+.news-section {
+  background: white;
+  .news-item {
+    border-left: 2px solid $primary-color;
+    padding-left: 5px;
+    margin-bottom: 8%;
+  }
+  p {
+    font-size: 1.2rem;
+    text-align:justify;
+  }
+}
+
+hr.small {
+  max-width: 50px;
+  margin: 10px auto;
+  border-width: 2px;
+  border-color: #fff;
+}
+//page headings
+
+
+
+
+.whatis {
+  background: rgba(48,101,155,0.7);
+  p {
+    padding: 50px;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: white;
+    text-align: justify;
+  }
+
+  h2 {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 300;
+    text-align: center;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+  }
+}
+
+
+
+.landing-page-heading {
+  padding: 15px;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: $primary-color;
+  color: #ffffff;
+  font-size: 48px;
+
+}
+
+
+
+
+
+.layout-color {
+  top: 87px;
+  bottom: 320px;
+  position: absolute;
+  height: 100%;
+  background: $primary-color;
+  width: 100%;
+}
+
+.landing-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  z-index:50;
+}
+
+.social-container{
+  background-color: $primary-color;
+  color: #ffffff;
+  font-size: 48px;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-weight: 300;
+}
+
+.social-container strong{
+  font-weight: 900;
+}
+//tabs about roles
+.features {
+  text-align: center;
+  hr {
+    width: 25%;
+    margin: 1rem auto;
+  }
+  p{
+    margin: 1rem auto 1rem;
+    text-align: justify;
+  }
+  .round-icon {
+
+    border-radius: 50%;
+    display: table;
+    height: 100px;
+    margin: 1rem auto 1rem;
+    width: 100px;
+    font-size: 3rem;
+    span {
+      color: #fff;
+      display: table-cell;
+      text-align: center;
+      vertical-align: middle;
+    }
+  }
+  @media only screen and (max-width: 40em) {
+    .columns {
+      margin-bottom: 5rem;
+    }
+  }
+}

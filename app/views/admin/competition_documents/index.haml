@@ -1,0 +1,9 @@
+.row
+  = link_to "New document" , new_admin_competition_document_path , :remote => "true" , :class => "button"
+  #errors
+    =render 'errors'
+  #new-document
+
+.row
+  #documents
+    =render 'documents'

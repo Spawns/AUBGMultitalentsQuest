@@ -1,0 +1,9 @@
+.circular-big{ :style => " background: url( #{@finalist.photo.url(:medium)} )"}
+.row
+  .small-7.small-centered.columns
+    %h3.text-center.org-name=@finalist.name
+    %h4.text-center.org-title=@finalist.school + ", " + @finalist.school_town
+.row
+%p=@finalist.self_describe
+
+

@@ -1,0 +1,26 @@
+.row
+  - if app_config.errors.any?
+    %ul
+      = app_config.errors.full_messages.each do |error|
+        %li= error
+
+  = simple_form_for [:admin, app_config] do |f|
+    =f.input :keywords
+    =f.input :description
+    %h5 Social URLs
+    .row.collapse
+      .small-4.large-3.columns
+        %span.prefix www.facebook.com/
+      .small-8.large-9.columns
+        =f.text_field :fb_url   , :placeholder => "Enter your URL"
+    .row.collapse
+      .small-4.large-3.columns
+        %span.prefix www.youtube.com/
+      .small-8.large-9.columns
+        =f.text_field :yt_url   , :placeholder => "Enter your URL"
+    %h5 Dates
+    .row
+      = f.input :conf_start ,  :input_html => { :class => 'large-4 columns' }
+    .row
+      = f.input :conf_end , :input_html => { :class => 'large-4 columns' }
+    =f.button :submit ,  "Modify Configuration"

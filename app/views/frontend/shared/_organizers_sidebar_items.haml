@@ -1,0 +1,5 @@
+%h3.conference-side-nav-heading
+  Competition #{conf_start('year')}
+%ul.side-nav
+  %li{:class=> active_el('sidebar-active',  frontend_finalists_path )}
+    =link_to "<h5> Finalists</h5>".html_safe, frontend_finalists_path

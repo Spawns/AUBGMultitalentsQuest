@@ -1,0 +1,28 @@
+= content_for :sidebar do
+  = render 'frontend/shared/conference_sidebar_items'
+= content_for :sidebar_title do
+  Conference Menu
+.row.full-width.page-bgimage{:id => 'agenda-page-bg'}
+  %h2.conference-heading
+    Agenda
+.row.day-container
+  .large-12.columns
+    - @days.each do |day|
+      %ul#dropdown
+        .row
+          .large-4.cols.centered
+            %h3.day
+              .day-num
+                ="Day #{day.number} ("+day.day_date.strftime("%d %b. %Y")+")"
+                %hr/
+        - day.events.each do |event|
+          %li
+            %h4
+              .row
+                .large-11.cols.left
+                  .event-time="#{event.title}: #{event.start.to_formatted_s(:time)} - #{event.stop.to_formatted_s(:time)}"
+                .large-1.cols.right
+                  %img#bg{ :class => "#{event.id}" ,:src => "https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_keyboard_arrow_down_48px-24.png"}
+            .day-events
+              %div= event.place
+              %div= event.description

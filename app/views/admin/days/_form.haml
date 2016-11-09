@@ -1,0 +1,11 @@
+= simple_form_for [:admin, @day] ,  :remote => "true"  do |f|
+  %h4
+    = action.capitalize
+    day
+  
+  = f.input :day_date , :input_html => { :class => 'large-4 columns' }
+  = f.input :number
+  .event-fields
+    = link_to add_new_event(f , :events)
+  = f.button :submit ,  action=='new' ? 'Add' : 'Update' , :class => "button expand"
+

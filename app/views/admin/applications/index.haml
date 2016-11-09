@@ -1,0 +1,14 @@
+.row
+  .medium-12.columns
+    %ul.button-group.even-4
+      %li
+        = link_to  "Submitted" ,admin_applications_path(:type => 'submitted'), :class => "button submitted success", remote: true
+      %li
+        = link_to  "Incomplete" ,admin_applications_path(:type => 'incomplete'), :class => "button incomplete", remote: true
+      %li
+        = link_to  "Accepted" ,admin_applications_path(:type => 'accepted'), :class => "button accepted", remote: true
+      %li
+        = link_to  "Denied" ,admin_applications_path(:type => 'denied'), :class => "button denied", remote: true
+.row
+  #applications
+    = render 'applications' , applications: @applications

@@ -1,0 +1,21 @@
+
+
+-# check the application process and reveal the appropriate controls
+- if app_config.app_process
+  %h4.alert-box.info
+    %i.fi-check
+    %stong
+      Application Status:
+    ACTIVE
+  = link_to 'Stop Application Process' , '#' , :class => 'button small alert' , 'data-reveal-id' => 'togglem'
+
+
+- else
+  %h4.alert-box.info
+    %i.fi-x
+    %stong
+      Application Status:
+    INACTIVE
+  = link_to 'Start Application Process' , '#' , :class => 'button small success' , 'data-reveal-id' =>  'togglem'
+-#modal for admin password verification
+= render 'admin_verification' , path: admin_app_config_toggle_process_path , id: 'togglem'

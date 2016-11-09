@@ -1,0 +1,31 @@
+// Place all the styles related to the applications controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.application-show-list {
+  list-style-type: none;
+}
+
+.application-show-list li {
+  font-weight: 400;
+  font-size: 1.2em;
+}
+
+.push-left {
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+
+.attr {
+  color: rgba(175,175,175,1);
+  font-style: italic;
+}
+
+.floatit_left {
+  float: left !important;
+}
+
+
+.fixed-height {
+  min-height:650px;
+}

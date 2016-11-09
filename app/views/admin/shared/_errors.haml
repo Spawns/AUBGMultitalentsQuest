@@ -1,0 +1,6 @@
+- if object.errors.any?
+  %ul
+    - object.errors.full_messages.each do |msg|
+      .alert-box.alert{"data-alert" => ""}
+        =msg
+        %a.close{:href => "#"} ×

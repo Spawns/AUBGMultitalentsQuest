@@ -1,0 +1,12 @@
+<% if @document.errors.any? %>
+$('#documents').html("<%=escape_javascript(render 'documents') %>");
+$('#errors').html("<%=escape_javascript(render 'errors') %>")
+$('#new-document').html("<%= escape_javascript( render 'form' ) %>");
+
+<% else %>
+$('#documents').html("<%=escape_javascript(render 'documents') %>");
+$('#new-document').slideUp(350);
+$('#errors').slideUp(350);
+$(document).foundation('equalizer', 'reflow');
+
+<% end %>

@@ -1,0 +1,13 @@
+.icon-bar.vertical.five-up{ :id => 'wide-bar'}
+  =link_to( raw("<i class='fi-graph-pie'></i><label>Statistics</label>") , admin_root_path , class:"item #{ active?(admin_root_path)}")
+  =link_to( raw("<i class='fi-web'></i><label>Configuration</label>") , new_admin_app_config_path , class:"item #{ active?(new_admin_app_config_path)}")
+  =link_to( raw("<i class='fi-folder'></i><label>Application Process</label>") , admin_app_config_edit_app_process_path(1) ,  class:"item #{ active?(admin_app_config_edit_app_process_path(1))}" )
+  -if  Application.submitted.count>0
+    =link_to( raw("<i class='fi-torsos-all'></i><label>Applicants <span class='number-circle'>#{Application.submitted.count}</span></label>") , admin_applications_path ,  class:"item #{active?(admin_applications_path)}")
+  -else
+    =link_to( raw("<i class='fi-torsos-all'></i><label>Applicants</label>") , admin_applications_path ,  class:"item #{active?(admin_applications_path)}")
+  =link_to( raw("<i class='fi-calendar'></i><label >Competition Agenda</label>") , admin_days_path ,  class:"item #{ active?(admin_days_path)}")
+  =link_to( raw("<i class='fi-torso-business'></i><label>Sponsors</label>") , admin_partners_path ,  class:"item #{ active?(admin_partners_path)}")
+  =link_to( raw("<i class='fi-page-doc'></i><label>Competition Documents</label>") , admin_competition_documents_path ,  class:"item #{ active?(admin_competition_documents_path)}")
+  =page_config_link("rules" , "compass" )
+  =page_config_link("accommodation" , "home")

@@ -1,0 +1,114 @@
+
+/* footer */
+
+.footer {
+  background-color: #292c2f;
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 1rem;}
+
+.footer hr{
+  border-color: #404040;
+}
+
+.footer .inline-list a {
+  display: inline;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 2px;
+  font-size: 1rem;
+  color: #fff;
+  text-align: center;
+  line-height: 35px;
+  margin: 0 3px 0 0;
+  list-style-type: none;
+  opacity: 0.5;}
+.footer .inline-list ul {
+  margin-left: 0 !important;}
+.footer .inline-list p{
+  margin:0;}
+.footer .inline-list h4 {
+  color: #666666;
+  font-size: 1.2rem;
+  text-align: center;
+}
+.footer .inline-list hr{
+  border-color: #404040;
+  margin: 0;
+}
+.footer .inline-list p{
+  text-align: center;
+}
+.footer .contact {
+  list-style-type: none;
+  margin: 0;
+  text-align: center;
+  color: #fff;
+  font-size: 2rem}
+.footer .contact li {
+  margin-bottom: 2rem;}
+.footer .contact li p {
+  padding-left: 5rem; }
+.footer .contact i {
+  position: absolute;
+  background-color: #33383b;
+  color: #fff;
+  font-size: 2rem;
+  border-radius: 50%;
+  line-height: 1;
+  margin: 0 0 0 -4rem;
+  vertical-align: middle;
+  padding: .25em .45em; }
+.footer .copywrite {
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 0.875rem;
+  margin: 0 0 1rem 0;
+  opacity: 0.5;}
+.footer .copywrite a{
+  color: #ffffff;
+  font-size: 1rem;
+}
+.footer .about {
+  color: #FFFFFF;
+  font-size: 0.875rem;
+  margin: 0 0 1rem 0; }
+.footer .footer-links a {
+  list-style: none;
+  font-weight: normal;
+  color: #fff;
+  padding: 3rem 0 2rem;
+  margin: 0;
+  font-size: 0.875rem; }
+.footer .footer-links a::after {
+  content: "";
+  padding: 0 0.2rem 0 0.4rem; }
+.footer .footer-links a:last-child::after {
+  content: "";
+  padding: 0 0.4rem 0 0.8rem; }
+@media only screen and (min-width: 40.063em) {
+  .footer p {
+    text-align: left; }
+  .footer .social {
+    text-align: left;
+    margin: 0; }
+  .footer .contact {
+    text-align: center; }
+  .footer .contact > i {
+    margin-right: 1rem; } }
+
+.logo {
+  color: #fff;
+  font-size: 1.5rem; }
+.logo i {
+  margin-right: 0.5rem; }
+
+.index-header {
+  max-height: 350px;
+  margin: 0 auto;
+}
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  //margin-bottom: -100px;
+}

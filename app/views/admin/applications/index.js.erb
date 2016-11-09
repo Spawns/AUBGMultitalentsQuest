@@ -1,0 +1,3 @@
+$('#applications').html("<%=escape_javascript(render 'applications', applications: @applications) %>");
+$('.button').removeClass('success');
+$(".button.<%= params[:type] %>").addClass('success');

@@ -1,0 +1,11 @@
+%h2.page-heading
+  =heading
+- partners.each_slice(4) do |group|
+  .row.org-group
+    - group.each do |partner|
+      .large-3.columns.part-img
+        .partner-image-wrapper.partner-overlay-fade-in
+          =image_tag partner.logo
+          .partner-image-overlay-content
+            %h2=partner.name
+            =link_to '', partner.link, :class=>'image-wrapper-link'

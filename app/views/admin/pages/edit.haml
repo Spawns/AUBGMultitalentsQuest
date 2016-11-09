@@ -1,0 +1,5 @@
+= render 'admin/shared/errors' , object: @page
+
+= simple_form_for  [:admin, @page] do |f|
+  = f.input :content, :as => :ckeditor, :input_html => { :ckeditor => {:toolbar => 'Full'} }
+  = f.button :submit ,  "Update Page" , :class => "button expand"

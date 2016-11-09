@@ -1,0 +1,12 @@
+<% if @contact_form.errors.any? %>
+  
+  $('.hide-f').show();
+  $('.hide-f').html( 'Message not sent! Reasons: <%= errors(@contact_form) %>')
+
+
+<% else  %>
+  $('.hide-f').slideUp(350);
+  $('.hide-s').show();
+  $('form').slideUp(350);
+
+<% end %>

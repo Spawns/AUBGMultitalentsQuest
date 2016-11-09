@@ -1,0 +1,11 @@
+- if alert || notice
+  .row.absolute-row
+    .small-4.small-centered.columns.notifications
+      - if alert
+        .alert-box.alert{:data => { "alert " =>  true }}
+          = alert
+          %a.close{:href => "#"} ×
+      - if notice
+        .alert-box.info{:data => { "alert " =>  true }}
+          = notice
+          %a.close{:href => "#"} ×

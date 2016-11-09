@@ -1,0 +1,12 @@
+%nav.tab-bar
+  %section.left-small.show-for-small-up.hide-for-large-up
+    %a.left-off-canvas-toggle.menu-icon{:href => "#"}
+      %span
+  %section.right
+    =link_to( "Log out" , destroy_admin_session_path ,:method => :delete , :class=>'admin-log-out')
+
+
+/ Off Canvas Menu
+%aside.left-off-canvas-menu.show-for-small-up.hide-for-large-up
+  =render 'admin/shared/menu_items'
+

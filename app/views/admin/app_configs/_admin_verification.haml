@@ -1,0 +1,7 @@
+.reveal-modal{"aria-hidden" => "true", "aria-labelledby" => "modalTitle", "data-reveal" => "", :role => "dialog" , :id => id}
+  %h5#modalTitle The administrator password required is in order to execute this action
+  = form_tag path  do
+    = password_field_tag :admin_password
+    = submit_tag "Verify", :class => 'button primary'
+  %a.close-reveal-modal{"aria-label" => "Close" }
+    %i.fi-x

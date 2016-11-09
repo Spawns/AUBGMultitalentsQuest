@@ -1,0 +1,38 @@
+.row
+  %h2.text-center.page-heading
+    Apply for the competition
+  = form_for(resource, as: resource_name, url: registration_path(resource_name) , :html => {:'data-abide' => 'true'}) do |f|
+    = devise_error_messages!
+    .row
+      .small-6.small-centered.columns
+        %label 
+          Email
+          %small
+            required
+        = f.email_field :email, autofocus: true , required: true
+        %small.error
+          An email address is required.
+    .row
+      .small-6.small-centered.columns
+        %label 
+          Password
+          %small
+            required
+        - if @validatable
+          %i
+            (#{@minimum_password_length} characters minimum)
+        = f.password_field :password, autocomplete: "off" , required: true
+        %small.error
+          A password is required.
+    .row
+      .small-6.small-centered.columns
+        %label 
+          Password Confirmation
+          %small
+            required
+        = f.password_field :password_confirmation, autocomplete: "off" , required: true , data:{equalto:  'user_password'}
+        %small.error
+          The password did not match
+
+    .text-center= f.submit "Sign up" , {:class => "button" , :role => "button"  }
+  = render "devise/shared/links"

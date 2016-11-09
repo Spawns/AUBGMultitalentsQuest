@@ -1,0 +1,13 @@
+%ul
+  - applications.each do |application|
+    .row
+      .medium-10.columns
+        -if application.status == "incomplete"
+          %h3=application.user.email
+        -else
+          %h3=application.name
+      .medium-2.columns
+        .button-bar
+          %ul.button-group
+            =link_to raw("<i class='fi-eye large-icon'></i>") , admin_application_path(application.id)
+= will_paginate @applications

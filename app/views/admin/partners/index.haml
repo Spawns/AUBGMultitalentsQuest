@@ -1,0 +1,14 @@
+.row
+  = link_to "New Supporter" , new_admin_partner_path , :remote => "true" , :class => "button"
+  #new-partner
+
+.row
+  .large-12.columns
+    %ul.tabs{"data-tab" => "", :role => "tablist"}
+      %li.tab-title{:role => "presentation", :class=> ('active')}
+        %a{"aria-controls" => "panel2-1", "aria-selected" => "true", :href => "#partner", :role => "tab", :tabindex => "0"} Sponsors
+    .tabs-content
+      .content{id: 'partners' , :class=> ('active')}
+        #partners
+          = render 'partners'
+          = will_paginate @partner_partners, :param_name => 'partner_page'

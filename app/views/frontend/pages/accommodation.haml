@@ -1,0 +1,11 @@
+= content_for :sidebar do
+  = render 'frontend/shared/conference_sidebar_items'
+= content_for :sidebar_title do
+  Conference Menu
+.row.full-width.page-bgimage{:id => 'accommodation-page-bg'}
+  %h2.conference-heading
+    Accommodation
+.row
+  .large-12.columns
+    = @page.content.html_safe
+
