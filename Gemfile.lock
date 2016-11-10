@@ -14,8 +14,6 @@ GEM
       activesupport (= 4.1.6)
       builder (~> 3.1)
       erubis (~> 2.7.0)
-    active_type (0.3.1)
-      activerecord (>= 3.2)
     activemodel (4.1.6)
       activesupport (= 4.1.6)
       builder (~> 3.1)
@@ -30,12 +28,7 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     addressable (2.4.0)
-    annotate (2.7.1)
-      activerecord (>= 3.2, < 6.0)
-      rake (>= 10.4, < 12.0)
     arel (5.0.1.20140414130214)
-    autoprefixer-rails (6.5.2)
-      execjs
     aws-sdk (1.66.0)
       aws-sdk-v1 (= 1.66.0)
     aws-sdk-v1 (1.66.0)
@@ -43,15 +36,6 @@ GEM
       nokogiri (>= 1.4.4)
     bcrypt (3.1.10)
     bcrypt (3.1.10-x86-mingw32)
-    better_errors (2.1.1)
-      coderay (>= 1.0.0)
-      erubis (>= 2.6.6)
-      rack (>= 0.9.0)
-    binding_of_caller (0.7.2)
-      debug_inspector (>= 0.0.1)
-    bootstrap-sass (3.3.5)
-      autoprefixer-rails (>= 5.0.0.1)
-      sass (>= 3.2.19)
     bootstrap-wysihtml5-rails (0.3.1.24)
       railties (>= 3.0)
     breadcrumbs_on_rails (2.3.1)
@@ -69,7 +53,6 @@ GEM
       activesupport (>= 3.0)
     cocaine (0.5.8)
       climate_control (>= 0.0.3, < 1.0)
-    coderay (1.1.1)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -81,7 +64,6 @@ GEM
       currencies (~> 0.4.2)
       i18n_data (~> 0.7.0)
     currencies (0.4.2)
-    debug_inspector (0.0.2)
     devise (3.5.3)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -90,8 +72,6 @@ GEM
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
     erubis (2.7.0)
-    eventmachine (1.2.0.1)
-    eventmachine (1.2.0.1-x86-mingw32)
     execjs (2.6.0)
     faraday (0.9.2)
       multipart-post (>= 1.2, < 3)
@@ -109,7 +89,6 @@ GEM
       activesupport (>= 3)
     haml (4.0.7)
       tilt
-    hashie (3.4.6)
     hike (1.2.3)
     html2haml (2.0.0)
       erubis (~> 2.7.0)
@@ -128,7 +107,6 @@ GEM
     jquery-ui-rails (5.0.5)
       railties (>= 3.2.16)
     json (1.8.3)
-    jwt (1.5.6)
     kaminari (0.16.3)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
@@ -154,30 +132,12 @@ GEM
     mini_portile2 (2.0.0)
     minitest (5.8.3)
     multi_json (1.11.2)
-    multi_xml (0.5.5)
     multipart-post (2.0.0)
     nested_form (0.3.2)
     nokogiri (1.6.7.1)
       mini_portile2 (~> 2.0.0.rc2)
     nokogiri (1.6.7.1-x86-mingw32)
       mini_portile2 (~> 2.0.0.rc2)
-    oauth2 (1.2.0)
-      faraday (>= 0.8, < 0.10)
-      jwt (~> 1.0)
-      multi_json (~> 1.3)
-      multi_xml (~> 0.5)
-      rack (>= 1.2, < 3)
-    omniauth (1.3.1)
-      hashie (>= 1.2, < 4)
-      rack (>= 1.0, < 3)
-    omniauth-google-oauth2 (0.4.1)
-      jwt (~> 1.5.2)
-      multi_json (~> 1.3)
-      omniauth (>= 1.1.1)
-      omniauth-oauth2 (>= 1.3.1)
-    omniauth-oauth2 (1.4.0)
-      oauth2 (~> 1.0)
-      omniauth (~> 1.2)
     orm_adapter (0.5.0)
     paperclip (4.3.2)
       activemodel (>= 3.2.0)
@@ -203,8 +163,6 @@ GEM
       bundler (>= 1.3.0, < 2.0)
       railties (= 4.1.6)
       sprockets-rails (~> 2.0)
-    rails-observers (0.1.2)
-      activemodel (~> 4.0)
     rails_12factor (0.0.3)
       rails_serve_static_assets
       rails_stdout_logging
@@ -281,11 +239,6 @@ GEM
       json (>= 1.8.0)
     warden (1.2.4)
       rack (>= 1.0)
-    web-console (2.3.0)
-      activemodel (>= 4.0)
-      binding_of_caller (>= 0.7.2)
-      railties (>= 4.0)
-      sprockets-rails (>= 2.0, < 4.0)
     wicked (1.2.1)
       railties (>= 3.0.7)
     will_paginate (3.0.7)
@@ -298,13 +251,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
-  active_type (= 0.3.1)
-  annotate
-  autoprefixer-rails
   aws-sdk (< 2.0)
-  better_errors (~> 2.1.0)
-  binding_of_caller
-  bootstrap-sass
   bootstrap-wysihtml5-rails (= 0.3.1.24)
   breadcrumbs_on_rails
   carmen-rails (~> 1.0.0)
@@ -313,7 +260,6 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   countries
   devise
-  eventmachine
   figaro
   foundation-icons-sass-rails
   foundation-rails (~> 5.4.5)
@@ -329,11 +275,9 @@ DEPENDENCIES
   mail_form
   meta-tags
   nested_form
-  omniauth-google-oauth2
   paperclip (~> 4.2)
   pg (~> 0.18.2)
   rails (= 4.1.6)
-  rails-observers
   rails_12factor
   rails_admin
   rails_admin_jcrop
@@ -345,7 +289,6 @@ DEPENDENCIES
   therubyracer
   tzinfo-data
   uglifier (>= 1.3.0)
-  web-console (~> 2.0)
   wicked
   will_paginate (~> 3.0.6)
   wow-rails

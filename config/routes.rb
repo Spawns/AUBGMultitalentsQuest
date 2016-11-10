@@ -3,14 +3,19 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { :registrations => 'users/registrations' , :sessions => 'users/sessions', confirmations: 'users/confirmations'}
   devise_for :admins, controllers: {:sessions => 'admins/sessions'}
 
+  #TODO TEST
+  resources :videos do
+    new do
+      post :upload
+      get  :save_video
+    end
+  end
+
   root 'root#index'
   get 'videos/:id', to: 'root#show_video' , as: 'show_video'
   namespace 'application_process' do
     get '', to: 'dashboard#index', as: '/'
     get 'status', to: 'applications#show_status' , as: 'status'
-    #TODO TEST
-    resources :video_uploads, only: [:new, :create]
-    get '/auth/:provider/callback', to: 'sessions#create'
     resources :applications do
       collection do
         get 'submit'
