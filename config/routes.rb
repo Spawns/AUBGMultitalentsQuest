@@ -3,14 +3,6 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { :registrations => 'users/registrations' , :sessions => 'users/sessions', confirmations: 'users/confirmations'}
   devise_for :admins, controllers: {:sessions => 'admins/sessions'}
 
-  #TODO TEST
-  resources :videos do
-    new do
-      post :upload
-      get  :save_video
-    end
-  end
-
   root 'root#index'
   get 'videos/:id', to: 'root#show_video' , as: 'show_video'
   namespace 'application_process' do
@@ -30,25 +22,21 @@ Rails.application.routes.draw do
     resources :contact_forms , only: [:new , :create]
     resources :posts , only: [:index , :show]
     resources :competition_documents , only: [:index]
-
     get 'processclosed' , to: 'exception#process_closed' , as: 'process_closed'
     get 'agenda' , to: 'days#index' , as:  'agenda'
     resources :partners , :only => [:index]
     resources :finalists , :only=> [:index , :show]
     get 'rules',  to: 'pages#rules' , as: 'rules'
     get 'accommodation',  to: 'pages#accommodation' , as: 'accommodation'
-
   end
 
   namespace :admin do
     root 'admin_index#index'
-
     resources :app_configs do
       get 'app_process_edit', to: 'app_configs#edit_app_process' , as: 'edit_app_process'
       post 'toggle_process', to: 'app_configs#toggle_process', as: 'toggle_process'
       post 'reset_process', to: 'app_configs#reset_process', as: 'reset_process'
     end
-
     resources :days do
       resources :events
     end
