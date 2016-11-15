@@ -34,13 +34,12 @@ steps :personal, :educational, :letters, :yt
     application_process_show_status_path
   end
 
-  #show the current status of the application
   def show_status
     add_breadcrumb "home", :root_path, :options => { :title => "Home" }
     add_breadcrumb "view application" , application_process_application_path(current_user.application) , :options => { :title => "View Application" }
     @application = current_user.application
   end
-  #submit a completed application
+
   def submit
    current_user.application.submit
   end
@@ -50,7 +49,6 @@ steps :personal, :educational, :letters, :yt
   end
 
 private
-  #fallback method to create a current user application if the user does not have one
   def user_application
     if !current_user.application
         @application = current_user.build_application
@@ -64,7 +62,7 @@ private
       redirect_to process_closed_path
     end
   end
-  #redirct the user if he has already submitted his/her application
+
   def application_submit_check
    if current_user.application && current_user.application.status == "submitted"
      redirect_to root_path
@@ -75,8 +73,7 @@ private
     params.require(:application).permit(:name, :dob, :gender, :mobile_phone, :current_address, :city , :high_school_grade , :learned_from ,  :favourite_subject, :self_describe, :terms_of_service, :photo, :steps, :gradebook_photo, :school_town, :school_municipality, :school_region, :school)
 
   end
-
-
+  
 end
 
 
