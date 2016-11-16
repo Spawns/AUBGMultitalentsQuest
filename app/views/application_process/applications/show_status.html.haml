@@ -32,6 +32,7 @@
     #panel3.content
       %ul.application-show-list
         %li=image_tag @application.photo.url(:medium)
+        =render 'show_field' , :attrib => @application.facebook , :attrib_name => "Facebook"
         %p
           =render 'show_field' , :attrib => @application.favourite_subject , :attrib_name => "What are your favorite school subjects and why?"
         %p

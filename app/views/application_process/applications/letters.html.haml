@@ -5,6 +5,7 @@
       = render partial: 'application_steps_links'
       = simple_form_for @application , url: wizard_path , :html => {:'data-abide' => 'true'} do |f|
         = f.input :photo
+        = f.input :facebook, :label => "Facebook profile:"
         = f.input :favourite_subject,:label => "What are your favorite school subjects and why? (max. 50 words)" , :input_html => {:rows => 3}
         = f.input :self_describe,:label => "Describe yourself in three words for your public profile."
         = f.input :learned_from, :label => "From where did you hear about the AUBG MultiTalent Quest?" , collection: [['From my school ', 'From my school '] , ['From an organizer' , 'From an organizer'], ['From a friend' , 'From a friend'] , ['From the social networks' , 'From the social networks'] , ['From the media' , 'From the media'] ]
