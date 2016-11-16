@@ -84,7 +84,7 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
   config.assets.raise_runtime_errors = true
   #TODO Enter new host
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  config.action_mailer.default_url_options = { host: 'https://aubgmultitalentsquest.herokuapp.com'}
   config.action_mailer.default :charset => "utf-8"
   config.action_mailer.raise_delivery_errors = true
 
