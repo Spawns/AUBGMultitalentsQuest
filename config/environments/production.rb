@@ -83,7 +83,6 @@ Rails.application.configure do
   config.action_mailer.perform_deliveries = true
   config.action_mailer.delivery_method = :smtp
   config.assets.raise_runtime_errors = true
-  #TODO Enter new host
   config.action_mailer.default_url_options = { host: 'https://aubgmultitalentsquest.herokuapp.com'}
   config.action_mailer.default :charset => "utf-8"
   config.action_mailer.raise_delivery_errors = true
@@ -97,7 +96,7 @@ Rails.application.configure do
       authentication:       'plain',
       enable_starttls_auto: true
   }
-  
+
   config.paperclip_defaults = {
       :storage => :s3,
       :s3_credentials => {
