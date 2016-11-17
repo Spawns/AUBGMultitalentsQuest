@@ -58,7 +58,6 @@ gem 'foundation-icons-sass-rails'
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
-#fuck you , windows
 #Use koala for integration with Graph API
 gem "koala", "~> 2.2"
 gem 'figaro'
@@ -67,3 +66,7 @@ gem 'groupdate'
 gem 'countries'
 gem 'yt', '~> 0.25.5'
 gem 'wow-rails'
+
+gem 'youtube_it'
+gem 'inherited_resources'
+gem 'acts_as_commentable'
