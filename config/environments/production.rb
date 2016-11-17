@@ -97,8 +97,7 @@ Rails.application.configure do
       authentication:       'plain',
       enable_starttls_auto: true
   }
-
-
+  
   config.paperclip_defaults = {
       :storage => :s3,
       :s3_credentials => {
