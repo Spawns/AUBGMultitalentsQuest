@@ -33,7 +33,5 @@ module ApplicationsHelper
    def check_for_incomplete
     if application_check then true else false end
    end
-
-
-
+  
 end

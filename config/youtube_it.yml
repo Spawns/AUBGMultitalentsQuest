@@ -1,0 +1,11 @@
+common: &common
+  dev_key: <%= ENV['YT_API_KEY'] %>
+  username:  <%= ENV['GMAIL_USERNAME'] %>
+  password:  <%= ENV['GMAIL_PASSWORD'] %>
+
+test:
+  <<: *common
+development:
+  <<: *common
+production:
+  <<: *common

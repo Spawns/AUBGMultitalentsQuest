@@ -3,7 +3,11 @@
   .small-7.small-centered.columns
     %h3.text-center.org-name=@finalist.name
     %h4.text-center.org-title=@finalist.school + ", " + @finalist.school_town
+    %h4.text-center.org-titile= "I see myself as #{@finalist.self_describe}."
 .row
-%p=@finalist.self_describe
+  .small-11.small-centered.columns
+    %p
+      %iframe{:allowfullscreen => "", :frameborder => "0", :height => "480", :src => "https://www.youtube.com/embed/#{@finalist.yt_video_id}", :width => "854"}
+
 
 

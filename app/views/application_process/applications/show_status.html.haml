@@ -10,8 +10,8 @@
       %a{:href => "#panel2"} Educational Information
     %dd
       %a{:href =>"#panel3"} Personal questions
-    -#%dd
-    -#  %a{:href =>"#panel4"} YouTube CV
+    %dd
+      %a{:href =>"#panel4"} YouTube CV
   .tabs-content.vertical
     #panel1.content.active
       %ul.application-show-list
@@ -37,9 +37,10 @@
           =render 'show_field' , :attrib => @application.favourite_subject , :attrib_name => "What are your favorite school subjects and why?"
         %p
           =render 'show_field' , :attrib => @application.self_describe , :attrib_name => "Describe yourself in three words."
-    -##panel4.content
-    -#  %ul.application-show-list
-    -#    =render 'show_field' , :attrib => @application.yt , :attrib_name => "YouTube CV"
+    #panel4.content
+      %ul.application-show-list
+        %p
+          %iframe{:allowfullscreen => "", :frameborder => "0", :height => "480", :src => "https://www.youtube.com/embed/#{@application.yt_video_id}", :width => "854"}
 .row
   %hr
   .medium-2.columns.push-left

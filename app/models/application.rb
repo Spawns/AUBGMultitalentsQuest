@@ -10,11 +10,6 @@ class Application < ActiveRecord::Base
 before_save :default_values
  belongs_to :user
 
-  # attribute :file, :varchar
-  # attribute :title, :varchar
-  # attribute :description, :text
-  # validates :file, :title, presence: true, :on => :update, :if => :active_or_video?
-
   has_attached_file :photo, :styles => { :medium => "250x250", :thumb => "100x100" }, :default_url => ":style/missing.jpg"
   validates_attachment_content_type :photo, :content_type => /\Aimage\/.*\Z/
   validates_attachment :photo , :content_type => { :content_type => ["image/jpeg", "image/gif", "image/png"] }, :size => { :in => 0..1000.kilobytes }
@@ -31,6 +26,8 @@ before_save :default_values
   validates :school, :school_municipality, :school_region, :school_town, :on => :update, format: { with: /\A[a-zA-Z ]+\z/, message: "allows only letters" }, :if => :active_or_educational?
   validates :favourite_subject, :self_describe, :learned_from, :photo, :facebook, :presence => true, :on => :update,  :if => :active_or_letters?
   validates_length_of :favourite_subject, :maximum => 70, :too_short => "Your favourite subject description must be at most 50 words.", :tokenizer => lambda {|str| str.scan(/\w+/) }, :on => :update,  :if => :active_or_letters?
+  validates :yt_video_id, :presence => true, :on => :update,  :if => :active_or_youtube?
+
 
   def active?
     steps == 'incomplete'
@@ -40,16 +37,16 @@ before_save :default_values
     self.steps.include?('personal') || active?
   end
 
-  # def active_or_video?
-  #   self.steps.include?('video') || active?
-  # end
-
   def active_or_educational?
     self.steps.include?('educational') || active?
   end
 
   def active_or_letters?
     self.steps.include?('letters') || active?
+  end
+
+  def active_or_youtube?
+    self.steps.include?('yt') || active?
   end
 
   def email

@@ -65,6 +65,13 @@
     .row
       .medium-12.columns
         %h3.subheader
+          Youtube CV
+        .panel
+          %p
+            %iframe{:allowfullscreen => "", :frameborder => "0", :height => "480", :src => "https://www.youtube.com/embed/#{@application.yt_video_id}", :width => "854"}
+    .row
+      .medium-12.columns
+        %h3.subheader
           Metadata
         .panel
           .row
