@@ -1,5 +1,5 @@
 class ApplicantMailer < ActionMailer::Base
-  default from: 'noreply@liberalartscompetition.org'
+  default from: 'noreply@aubgquest.org'
   def acceptance_mail(application)
     @application = application
     @url = 'https://aubgmultitalentsquest.herokuapp.com'

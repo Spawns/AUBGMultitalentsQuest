@@ -10,7 +10,7 @@
         = f.input :self_describe,:label => "Describe yourself in three words for your public profile."
         = f.input :learned_from, :label => "From where did you hear about the AUBG MultiTalent Quest?" , collection: [['From my school ', 'From my school '] , ['From an organizer' , 'From an organizer'], ['From a friend' , 'From a friend'] , ['From the social networks' , 'From the social networks'] , ['From the media' , 'From the media'] ]
         = button_tag( :class => "button") do
-          Next
+          Submit
           %i.fi-arrow-right
 
 =javascript_include_tag 'textareavalidate'

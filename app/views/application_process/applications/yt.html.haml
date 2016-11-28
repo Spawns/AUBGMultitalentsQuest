@@ -1,8 +1,0 @@
-.row
-  .large-12.columns.fixed-height
-    %fieldset
-      %legend Liberal Arts Application Form
-      = render partial: 'application_steps_links'
-      = simple_form_for @application , url: wizard_path do |f|
-        = f.input :yt_video_id
-        = f.button :submit , "Complete Application"

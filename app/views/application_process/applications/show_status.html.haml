@@ -9,9 +9,10 @@
     %dd
       %a{:href => "#panel2"} Educational Information
     %dd
-      %a{:href =>"#panel3"} Personal questions
+      %a{:href =>"#panel3"} YouTube CV
     %dd
-      %a{:href =>"#panel4"} YouTube CV
+      %a{:href =>"#panel4"} Personal questions
+
   .tabs-content.vertical
     #panel1.content.active
       %ul.application-show-list
@@ -25,11 +26,15 @@
       %ul.application-show-list
         =render 'show_field' , :attrib => @application.school , :attrib_name => "School"
         =render 'show_field' , :attrib => @application.school_town , :attrib_name => "School town"
-        =render 'show_field' , :attrib => @application.school_municipality , :attrib_name => "School municipality"
         =render 'show_field' , :attrib => @application.school_region , :attrib_name => "School region"
         =render 'show_field' , :attrib => @application.high_school_grade , :attrib_name => "High school grade"
         %li=image_tag @application.gradebook_photo.url(:medium)
     #panel3.content
+      %ul.application-show-list
+        =render 'show_field' , :attrib => @application.uploader.title , :attrib_name => "School"
+        =render 'show_field' , :attrib => @application.uploader.description , :attrib_name => "School"
+
+    #panel4.content
       %ul.application-show-list
         %li=image_tag @application.photo.url(:medium)
         =render 'show_field' , :attrib => @application.facebook , :attrib_name => "Facebook"
@@ -37,10 +42,7 @@
           =render 'show_field' , :attrib => @application.favourite_subject , :attrib_name => "What are your favorite school subjects and why?"
         %p
           =render 'show_field' , :attrib => @application.self_describe , :attrib_name => "Describe yourself in three words."
-    #panel4.content
-      %ul.application-show-list
-        %p
-          %iframe{:allowfullscreen => "", :frameborder => "0", :height => "480", :src => "https://www.youtube.com/embed/#{@application.yt_video_id}", :width => "854"}
+
 .row
   %hr
   .medium-2.columns.push-left

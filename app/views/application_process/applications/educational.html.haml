@@ -6,9 +6,8 @@
       = simple_form_for @application , url: wizard_path do |f|
         = f.input :school
         = f.input :school_town
-        = f.input :school_municipality
         = f.input :school_region
-        = f.input :high_school_grade
+        = f.input :high_school_grade, :label => "Average high school grede from 9th and 10th grade (GPA):"
         = f.input :gradebook_photo, :label => "Please, upload a scanned copy of your school gradebook showing your GPA from 9th and 10th grade."
         = button_tag( :class => "button") do
           Next

@@ -7,11 +7,11 @@
     =link_to "<div class='circlenumber'><h3>2</h3></div>".html_safe, wizard_path(:educational)
     %h5
       Educational Background
-  .small-12.medium-2.columns.end{:class => active_el('active-class' , wizard_path(:letters))}
-    =link_to  "<div class='circlenumber'><h3>3</h3></div>".html_safe, wizard_path(:letters)
-    %h5
-      Personal questions
-  .small-12.medium-2.columns.end{:class => active_el('active-class' , wizard_path(:yt))}
-    =link_to  "<div class='circlenumber'><h3>4</h3></div>".html_safe, wizard_path(:yt)
+  .small-12.medium-2.columns.end{:class => active_el('active-class' , wizard_path(:uploader))}
+    =link_to  "<div class='circlenumber'><h3>3</h3></div>".html_safe, wizard_path(:uploader)
     %h5
       YouTube CV
+  .small-12.medium-2.columns.end{:class => active_el('active-class' , wizard_path(:letters))}
+    =link_to  "<div class='circlenumber'><h3>4</h3></div>".html_safe, wizard_path(:letters)
+    %h5
+      Personal questions

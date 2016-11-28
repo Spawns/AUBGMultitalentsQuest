@@ -3,10 +3,10 @@ class VideosController < InheritedResources::Base
   def upload
     @video = Video.create(video_params)
     if @video
-      @upload_info = Video.token_form(video_params, save_video_new_video_url(:video_id => @video.id))
+      @upload_info = Video.token_form(save_video_new_video_url(:video_id => @video.id))
     else
       respond_to do |format|
-        format.html { render "/videos/new" }
+        format.html { render "/applications/new" }
       end
     end
   end

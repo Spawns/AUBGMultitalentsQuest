@@ -80,3 +80,4 @@ function isOnScreen(element) {
 
     return scrollIsAboveElement && elementIsVisibleOnScreen;
 }
+

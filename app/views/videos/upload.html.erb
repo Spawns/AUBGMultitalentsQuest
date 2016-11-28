@@ -1,8 +1,6 @@
 <div class="block">
   <div class="content">            
-    <h2 class="title"><%= t("web-app-theme.new", :default => "New")%>  Video</h2>
     <div class="inner">
-      <p>Step 2: upload a new video.</p>
       <%= form_tag @upload_info[:url], :multipart => true do %>
         <%= hidden_field_tag :token, @upload_info[:token] %>
         <%= label_tag :file %>

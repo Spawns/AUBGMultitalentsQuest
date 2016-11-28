@@ -5,7 +5,7 @@
         =image_tag(@application.photo.url(:medium))
       .medium-10.columns
         %h1=@application.name
-        %h3=@application.user.email
+        =mail_to @application.user.email
     .row
       .medium-10.columns
         %h3.subheader
@@ -23,20 +23,18 @@
             .medium-2.columns
               =render 'show_field' , :attrib => @application.city, :attrib_name=> "City:"
     .row
-      .medium-10.columns
+      .medium-12.columns
         %h3.subheader
           Education Information
         .panel
           .row
-            .medium-6.columns
+            .medium-3.columns
               =render 'show_field' , :attrib => @application.school, :attrib_name=> "School:"
-            .medium-6.columns
+            .medium-3.columns
               =render 'show_field' , :attrib => @application.school_town, :attrib_name=> "School town:"
-            .medium-6.columns
-              =render 'show_field' , :attrib => @application.school_municipality, :attrib_name=> "School municipality:"
-            .medium-6.columns
+            .medium-3.columns
               =render 'show_field' , :attrib => @application.school_region, :attrib_name=> "School region:"
-            .medium-6.columns
+            .medium-3.columns
               =render 'show_field' , :attrib => @application.high_school_grade, :attrib_name=> "High school grade:"
           .row
             .medium-12.columns
@@ -68,7 +66,7 @@
           Youtube CV
         .panel
           %p
-            %iframe{:allowfullscreen => "", :frameborder => "0", :height => "480", :src => "https://www.youtube.com/embed/#{@application.yt_video_id}", :width => "854"}
+            %iframe{:allowfullscreen => "", :frameborder => "0", :height => "480", :src => "https://www.youtube.com/embed/#{@application.uploader.yt_video_id}", :width => "854"}
     .row
       .medium-12.columns
         %h3.subheader

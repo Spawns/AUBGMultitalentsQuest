@@ -7,7 +7,7 @@ layout 'application'
 
 include Wicked::Wizard
 
-steps :personal, :educational, :letters, :yt
+steps :personal, :educational, :uploader, :letters
 
   def create
     @application = current_user.build_application
@@ -19,6 +19,10 @@ steps :personal, :educational, :letters, :yt
 
   def show
     @application = current_user.application
+    case step
+      when :uploader
+        @uploader = @application.build_uploader unless @application.uploader
+    end
     render_wizard
   end
 
@@ -48,7 +52,29 @@ steps :personal, :educational, :letters, :yt
     redirect_to wizard_path(steps.first)
   end
 
+  def upload
+    @uploader = Uploader.create(uploader_params)
+    if @uploader
+      @upload_info = Uploader.token_form(save_video_new_application_process_application_uploader_url(:uploader_id => @uploader.id))
+    else
+      respond_to do |format|
+        format.html { render "application_process/applications/uploader" }
+      end
+    end
+  end
+
+  def save_video
+    @uploader = Uploader.find(params[:uploader_id])
+    @uploader.update_attributes(:yt_video_id => params[:id].to_s)
+    redirect_to  new_application_process_application_uploader_path, :notice => "The video was successfully uploaded"
+  end
+
 private
+
+  def uploader_params
+    params.require(:uploader).permit!
+  end
+
   def user_application
     if !current_user.application
         @application = current_user.build_application
@@ -70,9 +96,9 @@ private
   end
 
   def permitted_params
-    params.require(:application).permit(:name, :dob, :gender, :mobile_phone, :current_address, :city , :high_school_grade , :learned_from ,  :favourite_subject, :self_describe, :terms_of_service, :photo, :steps, :gradebook_photo, :school_town, :school_municipality, :school_region, :school, :facebook, :yt_video_id)
+    params.require(:application).permit(:name, :dob, :gender, :mobile_phone, :current_address, :city , :high_school_grade , :learned_from ,  :favourite_subject, :self_describe, :terms_of_service, :photo, :steps, :gradebook_photo, :school_town, :school_region, :school, :facebook, :uploader_attributes => [:title , :description , :yt_video_id])
   end
-  
+
 end
 
 

@@ -1,7 +1,7 @@
 %div{:class=> ("sticky" unless !active?(root_path))}
   %nav.top-bar{"data-topbar" => "", :role => "navigation" , :id => "access"}
     %ul.title-area{ :style => 'z-index:999;'}
-      %li.name
+      %li.name{:style => "padding-left: 10px;"}
         %h1
           = link_to image_tag("logo.png") , root_path
       %li.toggle-topbar.menu-icon
@@ -14,19 +14,18 @@
         -#  %ul.dropdown
         %li
           = link_to  "Rules" , frontend_rules_path
-        %li
-          = link_to  "Agenda" , frontend_agenda_path
-        %li
-          = link_to  "Accommodation" , frontend_accommodation_path
+        -#%li
+        -#  = link_to  "Agenda" , frontend_agenda_path
+        -#%li
+        -#  = link_to  "Accommodation" , frontend_accommodation_path
         %li
           = link_to  "Documents" , frontend_competition_documents_path
-        %li
-          = link_to "Finalists" , frontend_finalists_path
+        -#%li
+        -#  = link_to "Finalists" , frontend_finalists_path
         %li
           = link_to "Sponsors" , frontend_partners_path
         %li
           = link_to "Contact" , new_frontend_contact_form_path
-
 
       %ul.right
         %li.divider

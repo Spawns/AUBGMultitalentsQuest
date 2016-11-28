@@ -3,11 +3,11 @@
 %ul.side-nav
   %li{:class=> active_el('sidebar-active',  frontend_rules_path )}
     =link_to "<i class='fi-compass'></i><h5> Rules</h5>".html_safe, frontend_rules_path
-  %li{:class=> active_el('sidebar-active', frontend_agenda_path )}
-    =link_to "<i class='fi-calendar'></i><h5> Agenda </h5>".html_safe, frontend_agenda_path
-  %li{:class=> active_el('sidebar-active', frontend_accommodation_path )}
-    =link_to "<i class='fi-home'></i><h5>Accommodation</h5>".html_safe , frontend_accommodation_path
+  -#%li{:class=> active_el('sidebar-active', frontend_agenda_path )}
+  -#  =link_to "<i class='fi-calendar'></i><h5> Agenda </h5>".html_safe, frontend_agenda_path
+  -#%li{:class=> active_el('sidebar-active', frontend_accommodation_path )}
+  -#  =link_to "<i class='fi-home'></i><h5>Accommodation</h5>".html_safe , frontend_accommodation_path
   %li{:class=> active_el('sidebar-active',  frontend_competition_documents_path )}
     =link_to  "<i class='fi-page-doc'></i><h5>Competition Documents</h5>".html_safe, frontend_competition_documents_path
-  %li{:class=> active_el('sidebar-active',  frontend_finalists_path )}
-    =link_to "<i class='fi-star'></i><h5> Finalists</h5>".html_safe, frontend_finalists_path
+  -#%li{:class=> active_el('sidebar-active',  frontend_finalists_path )}
+  -#  =link_to "<i class='fi-star'></i><h5> Finalists</h5>".html_safe, frontend_finalists_path
