@@ -1,6 +1,12 @@
 !!!
 %html{:lang => "en"}
   %head
+    :javascript
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-PFK3KFP');
     = favicon_link_tag 'favicon.ico'
     %meta{:charset => "utf-8"}/
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
@@ -11,6 +17,8 @@
     = display_meta_tags( :site => "AUBG Multitalent Quest", :keywords => app_keywords , :description => app_description , :og => { :title    => "AUBG Multitalent Quest" , :description => app_description  , :image => image_url("h.png")})
     %link{:href => "//fonts.googleapis.com/css?family=Roboto+Condensed:300italic,300,400italic,400,700italic,700", :rel => "stylesheet", :type => "text/css"}
   %body
+    %noscript
+      %iframe{:height => "0", :src => "https://www.googletagmanager.com/ns.html?id=GTM-PFK3KFP", :style => "display:none;visibility:hidden", :width => "0"}
     = render "frontend/shared/header"
     = breadcrumbs_partial
     = render 'users/shared/devise_notification'

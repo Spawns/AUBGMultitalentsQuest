@@ -1,6 +1,12 @@
 !!!
 %html{:lang => "en"}
   %head
+    :javascript
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-PFK3KFP');
     %meta{:charset => "utf-8"}/
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
     %title= content_for?(:title) ? yield(:title) : "Liberal Arts"
@@ -9,7 +15,8 @@
     = javascript_include_tag "configuration"
     = csrf_meta_tags
   %body
-
+    %noscript
+      %iframe{:height => "0", :src => "https://www.googletagmanager.com/ns.html?id=GTM-PFK3KFP", :style => "display:none;visibility:hidden", :width => "0"}
     .off-canvas-wrap{"data-offcanvas" => ""}
       .inner-wrap{:id=>'wrap'}
         = render 'admin/shared/header'

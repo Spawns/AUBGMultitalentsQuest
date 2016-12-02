@@ -36,7 +36,7 @@
           - else
             - if  user_signed_in?
               %li.active
-                =link_to  "Apply now"  , application_process_create_application_path
+                =link_to  "Register now"  , application_process_create_application_path
 
           - if user_signed_in?
             %li.divider
@@ -46,5 +46,5 @@
             %li
               = link_to "Sign in"  , new_user_session_path
             %li.active
-              =link_to  "Apply now"  , new_user_registration_path
+              =link_to  "Register now"  , new_user_registration_path
         %li.divider
