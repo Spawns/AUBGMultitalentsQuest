@@ -9,8 +9,8 @@
         = f.collection_radio_buttons( :gender, [["M", 'M'], ["F", 'F']], :first, :last, label: 'Gender', checked: @application.gender , item_wrapper_class: :block_radio_button_collection  )
         = f.input :dob, :as=> 'string' ,:label => 'Date of birth', input_html: { class: 'datepicker'}
         = f.input :current_address , :label => 'Address'
+        = f.input :city, :label => 'Town'
         = f.input :mobile_phone , as: :tel
-        = f.input :city
         = f.check_box  :terms_of_service ,  required: true
         %span
         I accept the

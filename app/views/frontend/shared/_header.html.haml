@@ -28,7 +28,6 @@
           = link_to "Contact" , new_frontend_contact_form_path
 
       %ul.right
-        %li.divider
         %li
           - if user_signed_in? && !current_user.application.nil? && current_user.application.id
             %li
@@ -36,10 +35,9 @@
           - else
             - if  user_signed_in?
               %li.active
-                =link_to  "Register now"  , application_process_create_application_path
+                =link_to  "Apply now"  , application_process_create_application_path
 
           - if user_signed_in?
-            %li.divider
             %li
               = link_to "Log out" , destroy_user_session_path ,  { :method => :delete }
           - else
