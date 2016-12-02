@@ -27,7 +27,7 @@ module ApplicationsHelper
   end
 
   def application_check
-   current_user.application.check_attributes && current_user.application.uploader.check_attributes
+   current_user.application.check_attributes
   end
 
    def check_for_incomplete

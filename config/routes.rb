@@ -4,10 +4,6 @@ Rails.application.routes.draw do
   devise_for :admins, controllers: {:sessions => 'admins/sessions'}
 
   resources :videos do
-    new do
-      post :upload
-      get  :save_video
-    end
   end
 
   root 'root#index'
@@ -16,12 +12,6 @@ Rails.application.routes.draw do
     get '', to: 'dashboard#index', as: '/'
     get 'status', to: 'applications#show_status' , as: 'status'
     resources :applications do
-      resources :uploader do
-        new do
-          post :upload
-          get  :save_video
-        end
-      end
       collection do
         get 'submit'
       end
