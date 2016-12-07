@@ -12,11 +12,11 @@ before_save :default_values
 
   has_attached_file :photo, :styles => { :medium => "250x250", :thumb => "100x100" }, :default_url => ":style/missing.jpg"
   validates_attachment_content_type :photo, :content_type => /\Aimage\/.*\Z/
-  validates_attachment :photo , :content_type => { :content_type => ["image/jpeg", "image/gif", "image/png"] }, :size => { :in => 0..1000.kilobytes }
+  validates_attachment :photo , :content_type => { :content_type => ["image/jpeg", "image/gif", "image/png"] }, :size => { :in => 0..1000.kilobytes, :message => "%bPhoto must be less than 1 megabytes in size"}
 
   has_attached_file :gradebook_photo, :styles => { :medium => "250x250", :thumb => "100x100" }, :default_url => ":style/missing.jpg"
   validates_attachment_content_type :gradebook_photo, :content_type => /\Aimage\/.*\Z/
-  validates_attachment :gradebook_photo , :content_type => { :content_type => ["image/jpeg", "image/gif", "image/png"] }, :size => { :in => 0..1000.kilobytes }
+  validates_attachment :gradebook_photo , :content_type => { :content_type => ["image/jpeg", "image/gif", "image/png"] }, :size => { :in => 0..1000.kilobytes, :message => "%bPhoto must be less than 1 megabytes in size"}
 
   validates_acceptance_of :terms_of_service
   validates :name, :dob, :gender, :mobile_phone, :current_address, :city, :terms_of_service, :presence => true, :on => :update, :if => :active_or_personal?

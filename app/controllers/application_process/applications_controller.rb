@@ -71,7 +71,7 @@ private
   end
 
   def permitted_params
-    params.require(:application).permit(:name, :dob, :gender, :mobile_phone, :current_address, :city , :high_school_grade , :learned_from ,  :favourite_subject, :self_describe, :terms_of_service, :photo, :steps, :gradebook_photo, :school_town, :school_region, :school, :facebook, :video_url)
+    params.require(:application).permit(:name, :dob, :gender, :mobile_phone, :current_address, :city , :high_school_grade , :learned_from ,  :favourite_subject, :self_describe, :terms_of_service, :photo, :steps, :gradebook_photo, :school_town, :school_region, :school, :facebook, :further_info,  :video_url)
   end
 
 end

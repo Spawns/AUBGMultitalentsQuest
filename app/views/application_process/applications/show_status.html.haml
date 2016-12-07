@@ -22,6 +22,8 @@
         =render 'show_field' , :attrib => @application.mobile_phone , :attrib_name => "Mobile Phone"
         =render 'show_field' , :attrib => @application.current_address , :attrib_name => "Address"
         =render 'show_field' , :attrib => @application.city , :attrib_name => "Town"
+        -if @application.further_info
+          =render 'show_field' , :attrib => @application.further_info , :attrib_name => "I would prefer to receive no communication from AUBG outside the AUBG MultiTalent Quest"
     #panel2.content
       %ul.application-show-list
         =render 'show_field' , :attrib => @application.school , :attrib_name => "School"

@@ -73,8 +73,10 @@
           Metadata
         .panel
           .row
-            .medium-12.columns
+            .medium-6.columns
               =render 'show_field' , :attrib => @application.learned_from, :attrib_name=> "Learned from:"
+            .medium-6.columns
+              =render 'show_field' , :attrib => @application.further_info, :attrib_name=> "I would prefer to receive no communication from AUBG outside the AUBG MultiTalent Quest"
     .row
       .medium-12.columns
         %h3.subheader

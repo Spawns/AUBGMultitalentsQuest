@@ -11,14 +11,19 @@
         = f.input :current_address , :label => 'Address'
         = f.input :city, :label => 'Town'
         = f.input :mobile_phone , as: :tel
-        = f.check_box  :terms_of_service ,  required: true
+        = f.check_box :further_info
         %span
-        I accept the
-        =link_to "Terms of Service" , "#" , :data => {'reveal-id' => "tos"}
+        I would prefer to receive no communication from AUBG outside the AUBG MultiTalent Quest.
         .row
-          = button_tag( :class => "button") do
-            Next
-            %i.fi-arrow-right
+          .large-12.columns
+            = f.check_box  :terms_of_service ,  required: true
+            %span
+            I accept the
+            =link_to "Terms of Service" , "#" , :data => {'reveal-id' => "tos"}
+            .row
+              = button_tag( :class => "button") do
+                Next
+                %i.fi-arrow-right
 #tos.reveal-modal{:class => "[expand, xlarge, large, medium, small]", :data =>{ 'reveal' => true}}
   %div.tos-container
     = tos

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161202021131) do
+ActiveRecord::Schema.define(version: 20161207121050) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -77,6 +77,7 @@ ActiveRecord::Schema.define(version: 20161202021131) do
     t.string   "school"
     t.string   "facebook"
     t.string   "video_url"
+    t.boolean  "further_info"
   end
 
   add_index "applications", ["user_id"], name: "index_applications_on_user_id", using: :btree
