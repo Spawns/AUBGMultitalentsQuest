@@ -1,11 +1,8 @@
 .row
-  %h4
+  %h4{:style => "text-align: center;"}
     =@video.title
-  %h5.subheader
+  %h5.subheader{:style => "text-align: center;"}
     =@video.published_at.strftime('%a %d %b %Y')
-  %p
-    =@video.description
 .row
-  .medium-8.columns
-    .flex-video
-      =@video.embed_html.html_safe
+  .flex-video{:style => "align: center;"}
+    =@video.embed_html.html_safe

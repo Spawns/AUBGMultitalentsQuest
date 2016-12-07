@@ -3,9 +3,6 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { :registrations => 'users/registrations' , :sessions => 'users/sessions', confirmations: 'users/confirmations'}
   devise_for :admins, controllers: {:sessions => 'admins/sessions'}
 
-  resources :videos do
-  end
-
   root 'root#index'
   get 'videos/:id', to: 'root#show_video' , as: 'show_video'
   namespace 'application_process' do

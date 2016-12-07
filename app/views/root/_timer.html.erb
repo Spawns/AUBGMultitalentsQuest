@@ -5,21 +5,21 @@
     var year = <%= conf_start("year") %> ;
     var month = <%= conf_start("month") %> - 1 ;
     var day = <%= conf_start("day") %> ;
-     setCountdownTimer(element, year, month, day);
+    setCountdownTimer(element, year, month, day);
 
 
   });
 
   function setCountdownTimer(element, year, month, day) {
-  var date = new Date(year, month, day);
-  $(element).countdown({until: date ,  format: 'dHMS'});
+    var date = new Date(year, month, day);
+    $(element).countdown({until: date ,  format: 'dHMS'});
   }
 
 
 </script>
 <!--[if lt IE 9]>
 <script>
-    document.createElement('video');
+  document.createElement('video');
 </script>
 <![endif]-->
 
@@ -37,7 +37,7 @@
   </div>
   <div class="timer-video">
     <video loop autoplay muted id="bgvid">
-      <source src='<%=  video_path("timer_video.mp4")  %>'  type="video/mp4">
+      <source src='<%=  show_video_path("timer_video.mp4")  %>'  type="video/mp4">
     </video>
   </div>
 </div>
