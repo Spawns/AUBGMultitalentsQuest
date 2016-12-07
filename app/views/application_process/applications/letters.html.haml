@@ -4,7 +4,7 @@
       %legend Liberal Arts Application Form
       = render partial: 'application_steps_links'
       = simple_form_for @application , url: wizard_path , :html => {:'data-abide' => 'true'} do |f|
-        = f.input :photo, :label => "Portrait photo"
+        = f.input :photo, :label => "Portrait photo (size limit is 1 MB)"
         = f.input :facebook, :label => "Link to Facebook profile(URL)"
         = f.input :favourite_subject,:label => "What are your favorite school subjects and why? (max. 50 words)" , :input_html => {:rows => 3}
         = f.input :self_describe,:label => "Describe yourself in three words for your public profile."
