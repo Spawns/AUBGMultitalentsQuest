@@ -30,7 +30,7 @@ class Admin::PagesController < Admin::ApplicationController
   private
 
   def page_params
-    params.require(:page).permit(:title , :content)
+    params.require(:page).permit(:title , :content, :content1)
   end
 
 end
