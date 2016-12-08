@@ -3,7 +3,13 @@ class Frontend::PagesController < ApplicationController
 
     def rules
       add_breadcrumb "home", :root_path, :options => { :title => "Home" }
-      add_breadcrumb "rules", :frontend_rules_path, :options => { :title => "Rules Information" }
+      add_breadcrumb "round1", :frontend_rules_path, :options => { :title => "Rules for Round 1" }
+      @page = Page.where(title: 'rules').first
+    end
+
+    def rules1
+      add_breadcrumb "home", :root_path, :options => { :title => "Home" }
+      add_breadcrumb "round2", :frontend_rules_path, :options => { :title => "Rules for Round 2" }
       @page = Page.where(title: 'rules').first
     end
 

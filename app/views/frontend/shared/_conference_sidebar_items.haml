@@ -2,7 +2,9 @@
   Competition #{conf_start('year')}
 %ul.side-nav
   %li{:class=> active_el('sidebar-active',  frontend_rules_path )}
-    =link_to "<i class='fi-compass'></i><h5> Rules</h5>".html_safe, frontend_rules_path
+    =link_to "<i class='fi-compass'></i><h5> Rules for Round 1</h5>".html_safe, frontend_rules_path
+  %li{:class=> active_el('sidebar-active',  frontend_rules1_path )}
+    =link_to "<i class='fi-compass'></i><h5> Rules for Round 2</h5>".html_safe, frontend_rules1_path
   -#%li{:class=> active_el('sidebar-active', frontend_agenda_path )}
   -#  =link_to "<i class='fi-calendar'></i><h5> Agenda </h5>".html_safe, frontend_agenda_path
   -#%li{:class=> active_el('sidebar-active', frontend_accommodation_path )}

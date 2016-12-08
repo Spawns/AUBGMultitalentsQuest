@@ -27,6 +27,7 @@ Rails.application.routes.draw do
     resources :partners , :only => [:index]
     resources :finalists , :only=> [:index , :show]
     get 'rules',  to: 'pages#rules' , as: 'rules'
+    get 'rules1',  to: 'pages#rules1' , as: 'rules1'
     get 'accommodation',  to: 'pages#accommodation' , as: 'accommodation'
   end
 
