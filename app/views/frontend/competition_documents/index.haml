@@ -7,7 +7,7 @@
     Competition Documents
 .row
   %h2.page-heading
-  -if @documents.title
+  -if @documents
     -@documents.each_slice(4) do |group|
       .row.file-group
         -group.each do |document|
