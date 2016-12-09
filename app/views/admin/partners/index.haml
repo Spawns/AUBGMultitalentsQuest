@@ -1,14 +1,20 @@
 .row
-  = link_to "New Supporter" , new_admin_partner_path , :remote => "true" , :class => "button"
+  = link_to "New Sponsor" , new_admin_partner_path , :remote => "true" , :class => "button"
   #new-partner
 
 .row
   .large-12.columns
     %ul.tabs{"data-tab" => "", :role => "tablist"}
-      %li.tab-title{:role => "presentation", :class=> ('active')}
-        %a{"aria-controls" => "panel2-1", "aria-selected" => "true", :href => "#partner", :role => "tab", :tabindex => "0"} Sponsors
+      %li.tab-title{:role => "presentation", :class=> ('active' unless @active == 'individual')}
+        %a{"aria-controls" => "panel2-1", "aria-selected" => "true", :href => "#corporate", :role => "tab", :tabindex => "0"} Corporate
+      %li.tab-title{:role => "presentation", :class=> ('active' unless @active == 'corporate') }
+        %a{"aria-controls" => "panel2-2", "aria-selected" => "false", :href => "#individual", :role => "tab", :tabindex => "0"} Individual
     .tabs-content
-      .content{id: 'partners' , :class=> ('active')}
-        #partners
-          = render 'partners'
-          = will_paginate @partner_partners, :param_name => 'partner_page'
+      .content{ id: 'corporate', :class=> ('active' unless @active == 'individual')}
+        #corporate-partners
+          = render 'partners' , :type => 'corporate'
+          = will_paginate @corporate_partners, :param_name => 'corporate_page'
+      .content{id: 'individual' , :class=> ('active' unless @active == 'corporate')}
+        #individual-partners
+          = render 'partners' , :type => 'individual'
+          = will_paginate @individual_partners, :param_name => 'individual_page'

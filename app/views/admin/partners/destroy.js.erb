@@ -1,1 +1,2 @@
-$('#partners').html("<%=escape_javascript(render 'partners') %>");
+$('#corporate-partners').html("<%=escape_javascript(render 'partners' , :type => 'corporate') %>");
+$('#individual-partners').html("<%=escape_javascript(render 'partners' , :type => 'individual') %>");

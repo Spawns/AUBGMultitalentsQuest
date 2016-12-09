@@ -1,5 +1,6 @@
 <% if @partner.errors.any? %>
-$('#partners').html("<%=escape_javascript(render 'partners') %>");
+$('#corporate-partners').html("<%=escape_javascript(render 'partners' , :type => 'corporate') %>");
+$('#individual-partners').html("<%=escape_javascript(render 'partners' , :type => 'individual') %>");
 $("#errors-<%= @partner.id %>").html("<%=escape_javascript(render 'errors') %>");
 $("#id-<%= @partner.id%>").html("<%= escape_javascript( render 'form' , action: 'edit' ) %>");
 
@@ -8,7 +9,8 @@ $("#id-<%= @partner.id%>").html("<%= escape_javascript( render 'form' , action: 
 
 $("#id-<%= @partner.id%>").slideUp(350);
 $("#errors-<%= @partner.id%>").slideUp(350);
-$('#partners').html("<%=escape_javascript(render 'partners') %>");
+$('#corporate-partners').html("<%=escape_javascript(render 'partners' , :type => 'corporate') %>");
+$('#individual-partners').html("<%=escape_javascript(render 'partners' , :type => 'individual') %>");
 
 
 <% end %>

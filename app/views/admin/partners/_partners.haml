@@ -1,6 +1,6 @@
 %ul
-- if @partner_partners.empty?
-  %h5="Your have no sponsors"
+- if instance_variable_get("@#{type}_partners").empty?
+  %h5="Your have no #{type}s."
 - else
-  - @partner_partners.each do |partner|
+  - instance_variable_get("@#{type}_partners").each do |partner|
     = render 'admin/partners/partner_attributes' , partner: partner

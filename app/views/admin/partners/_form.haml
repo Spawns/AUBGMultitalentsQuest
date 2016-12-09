@@ -1,9 +1,10 @@
 = simple_form_for [:admin, @partner] , :html => { :multipart => true }, :remote => true   do |f|
   %h4
     = action.capitalize
-    Supporter
+    Sponsor
   = f.input :name, as: :string
   = f.input :link , :input_html => { :class => 'large-4 columns' }
+  = f.input :role , :collection => [['Corporate','corporate'],['Individual' , 'individual']]
   - if action == 'edit'
     =image_tag @partner.logo
   = f.input :logo, as: :file

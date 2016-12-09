@@ -8,6 +8,13 @@ class Admin::PartnersController < Admin::ApplicationController
 
 
   def index
+    if params[:corporate_page]
+      @active = 'corporate'
+    elsif params[:individual_page]
+      @active = 'individual'
+    else
+      @active = 'corporate'
+    end
   end
 
   def new
@@ -60,14 +67,16 @@ class Admin::PartnersController < Admin::ApplicationController
 
   private
   def all_partners
-    @partner_partners = Partner.paginate(page: params[:partner_page], :per_page => 4).order('created_at DESC')
+    @corporate_partners = Partner.where("role = :role" ,  role: 'corporate').paginate(page: params[:corporate_page], :per_page => 4).order('created_at DESC')
+    @individual_partners = Partner.where("role = :role" ,  role: 'individual').paginate(page: params[:individual_page], :per_page => 4).order('created_at DESC')
+
   end
 
   def set_partner
     @partner = Partner.find(params[:id])
   end
   def partner_params
-    params.require(:partner).permit(:link , :logo  , :name)
+    params.require(:partner).permit(:link, :logo, :name, :role)
   end
 
 end
