@@ -5,6 +5,8 @@
 .row.full-width.page-bgimage{:id => 'rules-page-bg'}
   %h2.conference-heading
     Rules for Round 2
-.row
-  .large-12.columns
-    = @page.content1.html_safe
+-if @page.content1
+  .row
+    .large-12.columns
+      = @page.content1.html_safe
+-else @page.content1
