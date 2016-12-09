@@ -4,7 +4,7 @@
       %legend Liberal Arts Application Form
       = render partial: 'application_steps_links'
       = simple_form_for @application , url: wizard_path do |f|
-        = f.input :video_url, :label => "Upload a 5-minute CV on YouTube and share the embeded code with us."
+        = f.input :video_url, :label => "Tell us who you are in a creative 2-minute CV-Video, ppload it on YouTube and share the link with us."
         = button_tag( :class => "button") do
           Next
           %i.fi-arrow-right

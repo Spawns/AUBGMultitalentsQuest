@@ -34,7 +34,7 @@
     #panel3.content
       %ul.application-show-list
         %p
-          %iframe{:allowfullscreen => "", :frameborder => "0", :height => "480", :src => "https://www.youtube.com/embed/#{@application.video_url}", :width => "854"}
+          %iframe{:allowfullscreen => "", :frameborder => "0", :height => "480", :src => "https://www.youtube.com/embed/#{parse_video_url(@application.video_url)}", :width => "854"}
 
     #panel4.content
       %ul.application-show-list

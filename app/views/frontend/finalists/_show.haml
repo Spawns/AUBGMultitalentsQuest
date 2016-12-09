@@ -7,7 +7,7 @@
 .row
   .small-11.small-centered.columns
     %p
-      %iframe{:allowfullscreen => "", :frameborder => "0", :height => "480", :src => "https://www.youtube.com/embed/#{@finalist.video_url}", :width => "854"}
+      %iframe{:allowfullscreen => "", :frameborder => "0", :height => "480", :src => "https://www.youtube.com/embed/#{parse_video_url(@finalist.video_url)}", :width => "854"}
 
 
 

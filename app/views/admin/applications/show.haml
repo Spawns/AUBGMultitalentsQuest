@@ -66,7 +66,7 @@
           Youtube CV
         .panel
           %p
-            %iframe{:allowfullscreen => "", :frameborder => "0", :height => "480", :src => "https://www.youtube.com/embed/#{@application.video_url}", :width => "854"}
+            %iframe{:allowfullscreen => "", :frameborder => "0", :height => "480", :src => "https://www.youtube.com/embed/#{parse_video_url(@application.video_url)}", :width => "854"}
     .row
       .medium-12.columns
         %h3.subheader

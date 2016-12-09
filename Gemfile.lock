@@ -257,6 +257,7 @@ GEM
     uglifier (2.7.2)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    url_to_media_tag (0.1.4)
     warden (1.2.4)
       rack (>= 1.0)
     wicked (1.2.1)
@@ -320,6 +321,7 @@ DEPENDENCIES
   therubyracer
   tzinfo-data
   uglifier (>= 1.3.0)
+  url_to_media_tag
   wicked
   will_paginate (~> 3.0.6)
   wow-rails
