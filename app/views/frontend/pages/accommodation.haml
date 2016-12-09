@@ -5,7 +5,12 @@
 .row.full-width.page-bgimage{:id => 'accommodation-page-bg'}
   %h2.conference-heading
     Accommodation
-.row
+-if @page.content
+  .row
+    .large-12.columns
+      = @page.content.html_safe
+-else
+  .row
   .large-12.columns
-    = @page.content.html_safe
+    %h2 Currently there is no information
 
