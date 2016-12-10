@@ -4,8 +4,16 @@
   .row.org-group
     - group.each do |partner|
       .large-3.columns.part-img
-        .partner-image-wrapper.partner-overlay-fade-in
-          =image_tag partner.logo
-          .partner-image-overlay-content
-            %h2=partner.name
-            =link_to '', partner.link, :class=>'image-wrapper-link'
+        - if image_path(partner.logo) != "/images/original/missing.jpg"
+          .partner-image-wrapper.partner-overlay-fade-in
+            =image_tag partner.logo
+            .partner-image-overlay-content
+              %h2=partner.name
+              =link_to '', partner.link, :class=>'image-wrapper-link'
+        -else
+          .partner-image-wrapper.partner-overlay-fade-in-no-image
+            =image_tag partner.logo
+            .partner-image-overlay-content
+              %h2=partner.name
+              =link_to '', partner.link, :class=>'image-wrapper-link'
+
