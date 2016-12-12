@@ -170,6 +170,7 @@ GEM
     rack-pjax (0.8.0)
       nokogiri (~> 1.5)
       rack (~> 1.1)
+    rack-rewrite (1.5.1)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (4.1.6)
@@ -309,6 +310,7 @@ DEPENDENCIES
   nested_form
   paperclip (~> 4.2)
   pg (~> 0.18.2)
+  rack-rewrite
   rails (= 4.1.6)
   rails_12factor
   rails_admin

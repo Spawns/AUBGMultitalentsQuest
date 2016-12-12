@@ -66,6 +66,7 @@ gem 'groupdate'
 gem 'countries'
 gem 'yt', '~> 0.25.5'
 gem 'wow-rails'
+gem 'rack-rewrite'
 gem 'url_to_media_tag'
 
 gem 'youtube_it'
