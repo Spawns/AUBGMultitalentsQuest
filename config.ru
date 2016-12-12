@@ -4,7 +4,7 @@ run Rails.application
 
 require 'rack/rewrite'
 use Rack::Rewrite do
-  rewrite   '/',  '/aubgquest1'
-  r301      '/',   '/aubgquest1'
+  rewrite   '/',  'aubgquest.herokuapp.com'
+  r301      '/',   'aubgquest.herokuapp.com'
   # r301      %r{/(\w+)_\w+},    '/$1'
 end
