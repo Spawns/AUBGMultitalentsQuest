@@ -16,8 +16,8 @@ module LiberalArts
     config.assets.initialize_on_precompile = false
     config.relative_url_root = "/aubgquest1"
     config.middleware.insert_before(Rack::Runtime, Rack::Rewrite) do
-      rewrite '/aubgquest1' , '/'
-      r301 '/aubgquest1' , '/'
+      rewrite '/aubgquest1' , '/kjhdaiuhewui'
+      r301 '/aubgquest1' , '/kdsiuhfu'
     end
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
