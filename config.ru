@@ -4,6 +4,6 @@ run Rails.application
 
 require 'rack/rewrite'
 use Rack::Rewrite do
-  rewrite   '/',  'https://aubgquest.herokuapp.com/'
-  r301      '/',   'https://aubgquest.herokuapp.com/'
+  rewrite   '/',  'aubgquest.herokuapp.com/'
+  r301      '/',   'aubgquest.herokuapp.com/'
 end
