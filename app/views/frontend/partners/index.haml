@@ -1,15 +1,15 @@
-.row
-  .large-9.columns
+.row{:style => "width: auto;"}
+  .large-9.columns.left
     .row
       - if @partners_corporate.count > 0
         = render 'partners_each' , partners: @partners_corporate , heading: "Corporate Sponsors"
     .row
       - if @partners_individual.count > 0
         = render 'partners_each' , partners: @partners_individual , heading: "Individual Sponsors"
-  .large-3.columns{:style => "text-align: center; align: center;"}
+  .large-3.columns.right{:style => "text-align: center;"}
     %section.top-bar-section{:style => "border-bottom: 0px;"}
-      %ul.nav-bar{:style => "list-style-type: none; border-bottom: 0px;"}
-        %li
+      %ul.right.nav-bar{:style => "list-style-type: none;"}
+        %li.active
           =link_to 'BECOME A SPONSOR', "https://secure.qgiv.com/for/aubulgaria/event/778578/", {:style => "font-size: 0.998rem"}
-    .row
+    .row{:style => "width: auto; margin: auto;"}
       %p For more information please contact AUBG Development office at development@aubg.edu
