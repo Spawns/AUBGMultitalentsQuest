@@ -6,5 +6,5 @@ require 'rack/rewrite'
 use Rack::Rewrite do
   rewrite   '/',  'https://aubgquest.herokuapp.com'
   r301      '/',   'https://aubgquest.herokuapp.com'
-  # r301      %r{/(\w+)_\w+},    '/$1'
+  r301      %r{/(\w+)_\w+},    '/$1'
 end
