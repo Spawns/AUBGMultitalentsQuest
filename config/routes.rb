@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-
   scope(:path => '/aubgquest') do
   devise_for :users, controllers: { :registrations => 'users/registrations' , :sessions => 'users/sessions', confirmations: 'users/confirmations'}
   devise_for :admins, controllers: {:sessions => 'admins/sessions'}
