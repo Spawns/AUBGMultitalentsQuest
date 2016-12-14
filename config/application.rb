@@ -14,11 +14,7 @@ module LiberalArts
     config.autoload_paths += Dir[Rails.root.join('app', 'models', '{**/}')]
     config.assets.precompile += %w( configuration.js )
     config.assets.initialize_on_precompile = false
-    config.relative_url_root = "/aubgquest1"
-    config.middleware.insert_before(Rack::Runtime, Rack::Rewrite) do
-      rewrite '/aubgquest1' , '/kjhdaiuhewui'
-      r301 '/aubgquest1' , '/kdsiuhfu'
-    end
+    config.action_controller.relative_url_root = '/aubgquest1'
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
     # config.time_zone = 'Central Time (US & Canada)'
