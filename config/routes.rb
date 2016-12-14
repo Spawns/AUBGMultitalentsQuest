@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'videos/:id', to: 'root#show_video' , as: 'show_video'
 
   scope(:path => '/aubgquest') do
 
@@ -7,6 +6,8 @@ Rails.application.routes.draw do
     devise_for :admins, controllers: {:sessions => 'admins/sessions'}
 
     root 'root#index'
+    get 'videos/:id', to: 'root#show_video' , as: 'show_video'
+
     namespace 'application_process' do
       get '', to: 'dashboard#index', as: '/'
       get 'status', to: 'applications#show_status' , as: 'status'
