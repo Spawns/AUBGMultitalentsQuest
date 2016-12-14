@@ -1,4 +1,4 @@
-//= require jquery
+//= require jquery.js
 //= require jquery-ui
 //= require jquery_ujs
 //= require jquery.countdown
