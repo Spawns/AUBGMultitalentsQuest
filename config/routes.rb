@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-
+  scope(:path => '/aubgquest') do
   devise_for :users, controllers: { :registrations => 'users/registrations' , :sessions => 'users/sessions', confirmations: 'users/confirmations'}
   devise_for :admins, controllers: {:sessions => 'admins/sessions'}
 
@@ -48,6 +48,8 @@ Rails.application.routes.draw do
     resources :partners
     resources :pages
     mount Ckeditor::Engine => '/ckeditor'
+  end
+
   end
 
 end
