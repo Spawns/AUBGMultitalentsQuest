@@ -2,6 +2,6 @@
 require ::File.expand_path('../config/environment',  __FILE__)
 
 map '/aubgquest' do
-  run LiberalArts::Application
+  run Rails.application
 end
 
