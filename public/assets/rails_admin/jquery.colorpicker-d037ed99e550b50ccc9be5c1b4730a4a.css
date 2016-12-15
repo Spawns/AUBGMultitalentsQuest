@@ -4,7 +4,7 @@
   position: relative;
   width: 36px;
   height: 36px;
-  background: url(/aubgquest/assets/rails_admin/colorpicker/select2.png);
+  background: url(/assets/rails_admin/colorpicker/select2.png);
 }
 
 /* line 9, /Users/Spawns/.rvm/gems/ruby-2.3.0/gems/rails_admin-0.8.1/app/assets/stylesheets/rails_admin/jquery.colorpicker.scss */
@@ -14,7 +14,7 @@
   left: 3px;
   width: 30px;
   height: 30px;
-  background: url(/aubgquest/assets/rails_admin/colorpicker/select2.png) center;
+  background: url(/assets/rails_admin/colorpicker/select2.png) center;
 }
 
 /* line 18, /Users/Spawns/.rvm/gems/ruby-2.3.0/gems/rails_admin-0.8.1/app/assets/stylesheets/rails_admin/jquery.colorpicker.scss */
@@ -23,7 +23,7 @@
   height: 176px;
   overflow: hidden;
   position: absolute;
-  background: url(/aubgquest/assets/rails_admin/colorpicker/custom_background.png);
+  background: url(/assets/rails_admin/colorpicker/custom_background.png);
   font-family: Arial, Helvetica, sans-serif;
   display: none;
   z-index: 11000;
@@ -49,7 +49,7 @@
   left: 0;
   width: 150px;
   height: 150px;
-  background: url(/aubgquest/assets/rails_admin/colorpicker/colorpicker_overlay.png);
+  background: url(/assets/rails_admin/colorpicker/colorpicker_overlay.png);
 }
 
 /* line 46, /Users/Spawns/.rvm/gems/ruby-2.3.0/gems/rails_admin-0.8.1/app/assets/stylesheets/rails_admin/jquery.colorpicker.scss */
@@ -60,7 +60,7 @@
   width: 11px;
   height: 11px;
   overflow: hidden;
-  background: url(/aubgquest/assets/rails_admin/colorpicker/colorpicker_select.gif);
+  background: url(/assets/rails_admin/colorpicker/colorpicker_select.gif);
   margin: -5px 0 0 -5px;
 }
 
@@ -80,7 +80,7 @@
   width: 35px;
   height: 9px;
   overflow: hidden;
-  background: url(/aubgquest/assets/rails_admin/colorpicker/custom_indic.gif) left top;
+  background: url(/assets/rails_admin/colorpicker/custom_indic.gif) left top;
   margin: -4px 0 0 0;
   left: 0px;
 }
@@ -128,7 +128,7 @@
   position: absolute;
   width: 72px;
   height: 22px;
-  background: url(/aubgquest/assets/rails_admin/colorpicker/custom_hex.png) top;
+  background: url(/assets/rails_admin/colorpicker/custom_hex.png) top;
   left: 212px;
   top: 142px;
 }
@@ -159,42 +159,42 @@
 
 /* line 131, /Users/Spawns/.rvm/gems/ruby-2.3.0/gems/rails_admin-0.8.1/app/assets/stylesheets/rails_admin/jquery.colorpicker.scss */
 .colorpicker_rgb_r {
-  background-image: url(/aubgquest/assets/rails_admin/colorpicker/custom_rgb_r.png);
+  background-image: url(/assets/rails_admin/colorpicker/custom_rgb_r.png);
   top: 52px;
   left: 212px;
 }
 
 /* line 136, /Users/Spawns/.rvm/gems/ruby-2.3.0/gems/rails_admin-0.8.1/app/assets/stylesheets/rails_admin/jquery.colorpicker.scss */
 .colorpicker_rgb_g {
-  background-image: url(/aubgquest/assets/rails_admin/colorpicker/custom_rgb_g.png);
+  background-image: url(/assets/rails_admin/colorpicker/custom_rgb_g.png);
   top: 82px;
   left: 212px;
 }
 
 /* line 141, /Users/Spawns/.rvm/gems/ruby-2.3.0/gems/rails_admin-0.8.1/app/assets/stylesheets/rails_admin/jquery.colorpicker.scss */
 .colorpicker_rgb_b {
-  background-image: url(/aubgquest/assets/rails_admin/colorpicker/custom_rgb_b.png);
+  background-image: url(/assets/rails_admin/colorpicker/custom_rgb_b.png);
   top: 112px;
   left: 212px;
 }
 
 /* line 146, /Users/Spawns/.rvm/gems/ruby-2.3.0/gems/rails_admin-0.8.1/app/assets/stylesheets/rails_admin/jquery.colorpicker.scss */
 .colorpicker_hsb_h {
-  background-image: url(/aubgquest/assets/rails_admin/colorpicker/custom_hsb_h.png);
+  background-image: url(/assets/rails_admin/colorpicker/custom_hsb_h.png);
   top: 52px;
   left: 282px;
 }
 
 /* line 151, /Users/Spawns/.rvm/gems/ruby-2.3.0/gems/rails_admin-0.8.1/app/assets/stylesheets/rails_admin/jquery.colorpicker.scss */
 .colorpicker_hsb_s {
-  background-image: url(/aubgquest/assets/rails_admin/colorpicker/custom_hsb_s.png);
+  background-image: url(/assets/rails_admin/colorpicker/custom_hsb_s.png);
   top: 82px;
   left: 282px;
 }
 
 /* line 156, /Users/Spawns/.rvm/gems/ruby-2.3.0/gems/rails_admin-0.8.1/app/assets/stylesheets/rails_admin/jquery.colorpicker.scss */
 .colorpicker_hsb_b {
-  background-image: url(/aubgquest/assets/rails_admin/colorpicker/custom_hsb_b.png);
+  background-image: url(/assets/rails_admin/colorpicker/custom_hsb_b.png);
   top: 112px;
   left: 282px;
 }
@@ -205,7 +205,7 @@
   position: absolute;
   width: 22px;
   height: 22px;
-  background: url(/aubgquest/assets/rails_admin/colorpicker/custom_submit.png) top;
+  background: url(/assets/rails_admin/colorpicker/custom_submit.png) top;
   left: 322px;
   top: 142px;
   overflow: hidden;

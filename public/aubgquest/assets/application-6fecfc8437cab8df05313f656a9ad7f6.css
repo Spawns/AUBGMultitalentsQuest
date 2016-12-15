@@ -9168,8 +9168,8 @@ th.hide-for-touch {
  */
 @font-face {
   font-family: "foundation-icons";
-  src: url(/aubgquest/foundation-icons.eot);
-  src: url(/aubgquest/foundation-icons.eot?#iefix) format("embedded-opentype"), url(/aubgquest/foundation-icons.woff) format("woff"), url(/aubgquest/foundation-icons.ttf) format("truetype"), url(/aubgquest/foundation-icons.svg#fontcustom) format("svg");
+  src: url(/foundation-icons.eot);
+  src: url(/foundation-icons.eot?#iefix) format("embedded-opentype"), url(/foundation-icons.woff) format("woff"), url(/foundation-icons.ttf) format("truetype"), url(/foundation-icons.svg#fontcustom) format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -11159,7 +11159,7 @@ legend {
 }
 /* line 5, /Users/Spawns/Projects/RailsProjects/liberal_arts/app/assets/stylesheets/finalists.css.scss */
 #finalists-page-bg {
-  background: url(/aubgquest/ABF_Gradiant.JPG);
+  background: url(/ABF_Gradiant.JPG);
   background-position: center center;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
@@ -11541,7 +11541,7 @@ video {
 @media screen and (max-width: 724px) {
   /* line 132, /Users/Spawns/Projects/RailsProjects/liberal_arts/app/assets/stylesheets/landing_page.scss */
   .videowrapper {
-    background: url(/aubgquest/countdown.jpg) no-repeat center center fixed;
+    background: url(/countdown.jpg) no-repeat center center fixed;
   }
 
   /* line 135, /Users/Spawns/Projects/RailsProjects/liberal_arts/app/assets/stylesheets/landing_page.scss */
@@ -12079,7 +12079,7 @@ html, body {
 
 /* line 158, /Users/Spawns/Projects/RailsProjects/liberal_arts/app/assets/stylesheets/pages.css.scss */
 #agenda-page-bg {
-  background: url(/aubgquest/page-agenda.jpg);
+  background: url(/page-agenda.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
@@ -12091,7 +12091,7 @@ html, body {
 
 /* line 169, /Users/Spawns/Projects/RailsProjects/liberal_arts/app/assets/stylesheets/pages.css.scss */
 #rules-page-bg {
-  background: url(/aubgquest/page-rules.jpg);
+  background: url(/page-rules.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
@@ -12103,7 +12103,7 @@ html, body {
 
 /* line 180, /Users/Spawns/Projects/RailsProjects/liberal_arts/app/assets/stylesheets/pages.css.scss */
 #documents-page-bg {
-  background: url(/aubgquest/page-documents.jpg);
+  background: url(/page-documents.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
@@ -12115,7 +12115,7 @@ html, body {
 
 /* line 192, /Users/Spawns/Projects/RailsProjects/liberal_arts/app/assets/stylesheets/pages.css.scss */
 #accommodation-page-bg {
-  background: url(/aubgquest/page-accommodation.jpg);
+  background: url(/page-accommodation.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   -webkit-background-size: cover;

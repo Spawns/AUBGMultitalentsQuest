@@ -203,7 +203,7 @@
 
 /* line 66, /Users/Spawns/.rvm/gems/ruby-2.3.0/gems/rails_admin-0.8.1/app/assets/stylesheets/rails_admin/aristo/jquery-ui-1.8.7.custom.scss */
 .ui-widget-header {
-  background: #ededed url(/aubgquest/assets/rails_admin/aristo/images/bg_fallback.png) 0 0 repeat-x;
+  background: #ededed url(/assets/rails_admin/aristo/images/bg_fallback.png) 0 0 repeat-x;
   /* Old browsers */
   background: -moz-linear-gradient(top, #ededed 0%, #c4c4c4 100%);
   /* FF3.6+ */
@@ -235,7 +235,7 @@
 
 /* line 80, /Users/Spawns/.rvm/gems/ruby-2.3.0/gems/rails_admin-0.8.1/app/assets/stylesheets/rails_admin/aristo/jquery-ui-1.8.7.custom.scss */
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
-  background: #ededed url(/aubgquest/assets/rails_admin/aristo/images/bg_fallback.png) 0 0 repeat-x;
+  background: #ededed url(/assets/rails_admin/aristo/images/bg_fallback.png) 0 0 repeat-x;
   /* Old browsers */
   background: -moz-linear-gradient(top, #ededed 0%, #c4c4c4 100%);
   /* FF3.6+ */
@@ -278,7 +278,7 @@
   outline: none;
   color: #1c4257;
   border: 1px solid #7096ab;
-  background: #ededed url(/aubgquest/assets/rails_admin/aristo/images/bg_fallback.png) 0 -50px repeat-x;
+  background: #ededed url(/assets/rails_admin/aristo/images/bg_fallback.png) 0 -50px repeat-x;
   /* Old browsers */
   background: -moz-linear-gradient(top, #b9e0f5 0%, #92bdd6 100%);
   /* FF3.6+ */
@@ -371,42 +371,42 @@
 .ui-icon {
   width: 16px;
   height: 16px;
-  background-image: url(/aubgquest/assets/rails_admin/aristo/images/ui-icons_222222_256x240.png);
+  background-image: url(/assets/rails_admin/aristo/images/ui-icons_222222_256x240.png);
 }
 
 /* line 128, /Users/Spawns/.rvm/gems/ruby-2.3.0/gems/rails_admin-0.8.1/app/assets/stylesheets/rails_admin/aristo/jquery-ui-1.8.7.custom.scss */
 .ui-widget-content .ui-icon {
-  background-image: url(/aubgquest/assets/rails_admin/aristo/images/ui-icons_222222_256x240.png);
+  background-image: url(/assets/rails_admin/aristo/images/ui-icons_222222_256x240.png);
 }
 
 /* line 129, /Users/Spawns/.rvm/gems/ruby-2.3.0/gems/rails_admin-0.8.1/app/assets/stylesheets/rails_admin/aristo/jquery-ui-1.8.7.custom.scss */
 .ui-widget-header .ui-icon {
-  background-image: url(/aubgquest/assets/rails_admin/aristo/images/ui-icons_222222_256x240.png);
+  background-image: url(/assets/rails_admin/aristo/images/ui-icons_222222_256x240.png);
 }
 
 /* line 130, /Users/Spawns/.rvm/gems/ruby-2.3.0/gems/rails_admin-0.8.1/app/assets/stylesheets/rails_admin/aristo/jquery-ui-1.8.7.custom.scss */
 .ui-state-default .ui-icon {
-  background-image: url(/aubgquest/assets/rails_admin/aristo/images/ui-icons_454545_256x240.png);
+  background-image: url(/assets/rails_admin/aristo/images/ui-icons_454545_256x240.png);
 }
 
 /* line 131, /Users/Spawns/.rvm/gems/ruby-2.3.0/gems/rails_admin-0.8.1/app/assets/stylesheets/rails_admin/aristo/jquery-ui-1.8.7.custom.scss */
 .ui-state-hover .ui-icon, .ui-state-focus .ui-icon {
-  background-image: url(/aubgquest/assets/rails_admin/aristo/images/ui-icons_454545_256x240.png);
+  background-image: url(/assets/rails_admin/aristo/images/ui-icons_454545_256x240.png);
 }
 
 /* line 132, /Users/Spawns/.rvm/gems/ruby-2.3.0/gems/rails_admin-0.8.1/app/assets/stylesheets/rails_admin/aristo/jquery-ui-1.8.7.custom.scss */
 .ui-state-active .ui-icon {
-  background-image: url(/aubgquest/assets/rails_admin/aristo/images/ui-icons_454545_256x240.png);
+  background-image: url(/assets/rails_admin/aristo/images/ui-icons_454545_256x240.png);
 }
 
 /* line 133, /Users/Spawns/.rvm/gems/ruby-2.3.0/gems/rails_admin-0.8.1/app/assets/stylesheets/rails_admin/aristo/jquery-ui-1.8.7.custom.scss */
 .ui-state-highlight .ui-icon {
-  background-image: url(/aubgquest/assets/rails_admin/aristo/images/ui-icons_454545_256x240.png);
+  background-image: url(/assets/rails_admin/aristo/images/ui-icons_454545_256x240.png);
 }
 
 /* line 134, /Users/Spawns/.rvm/gems/ruby-2.3.0/gems/rails_admin-0.8.1/app/assets/stylesheets/rails_admin/aristo/jquery-ui-1.8.7.custom.scss */
 .ui-state-error .ui-icon, .ui-state-error-text .ui-icon {
-  background: url(/aubgquest/assets/rails_admin/aristo/images/icon_sprite.png) -16px 0 no-repeat !important;
+  background: url(/assets/rails_admin/aristo/images/icon_sprite.png) -16px 0 no-repeat !important;
 }
 
 /* line 135, /Users/Spawns/.rvm/gems/ruby-2.3.0/gems/rails_admin-0.8.1/app/assets/stylesheets/rails_admin/aristo/jquery-ui-1.8.7.custom.scss */
@@ -1022,7 +1022,7 @@
 
 /* line 259, /Users/Spawns/.rvm/gems/ruby-2.3.0/gems/rails_admin-0.8.1/app/assets/stylesheets/rails_admin/aristo/jquery-ui-1.8.7.custom.scss */
 .ui-icon-info {
-  background: url(/aubgquest/assets/rails_admin/aristo/images/icon_sprite.png) 0 0 no-repeat !important;
+  background: url(/assets/rails_admin/aristo/images/icon_sprite.png) 0 0 no-repeat !important;
 }
 
 /* line 260, /Users/Spawns/.rvm/gems/ruby-2.3.0/gems/rails_admin-0.8.1/app/assets/stylesheets/rails_admin/aristo/jquery-ui-1.8.7.custom.scss */
@@ -1732,7 +1732,7 @@ button.ui-button-icons-only {
   outline: none;
   color: #1c4257;
   border-color: #7096ab;
-  background: #ededed url(/aubgquest/assets/rails_admin/aristo/images/bg_fallback.png) 0 -50px repeat-x;
+  background: #ededed url(/assets/rails_admin/aristo/images/bg_fallback.png) 0 -50px repeat-x;
   /* Old browsers */
   background: -moz-linear-gradient(top, #b9e0f5 0%, #92bdd6 100%);
   /* FF3.6+ */
@@ -1861,7 +1861,7 @@ input.ui-button::-moz-focus-inner {
 
 /* line 524, /Users/Spawns/.rvm/gems/ruby-2.3.0/gems/rails_admin-0.8.1/app/assets/stylesheets/rails_admin/aristo/jquery-ui-1.8.7.custom.scss */
 .ui-buttonset .ui-button.ui-state-active {
-  background: #ededed url(/aubgquest/assets/rails_admin/aristo/images/bg_fallback.png) 0 -50px repeat-x;
+  background: #ededed url(/assets/rails_admin/aristo/images/bg_fallback.png) 0 -50px repeat-x;
   /* Old browsers */
   background: -moz-linear-gradient(top, #b9e0f5 0%, #92bdd6 100%);
   /* FF3.6+ */
@@ -1945,7 +1945,7 @@ button.ui-button::-moz-focus-inner {
 .ui-dialog .ui-dialog-titlebar-close span {
   display: block;
   margin: 1px;
-  background: url(/aubgquest/assets/rails_admin/aristo/images/icon_sprite.png) 0 -16px no-repeat;
+  background: url(/assets/rails_admin/aristo/images/icon_sprite.png) 0 -16px no-repeat;
 }
 
 /* line 557, /Users/Spawns/.rvm/gems/ruby-2.3.0/gems/rails_admin-0.8.1/app/assets/stylesheets/rails_admin/aristo/jquery-ui-1.8.7.custom.scss */
@@ -2028,7 +2028,7 @@ button.ui-button::-moz-focus-inner {
 
 /* line 576, /Users/Spawns/.rvm/gems/ruby-2.3.0/gems/rails_admin-0.8.1/app/assets/stylesheets/rails_admin/aristo/jquery-ui-1.8.7.custom.scss */
 .ui-slider .ui-slider-handle {
-  background: url(/aubgquest/assets/rails_admin/aristo/images/slider_handles.png) 0px -23px no-repeat;
+  background: url(/assets/rails_admin/aristo/images/slider_handles.png) 0px -23px no-repeat;
   position: absolute;
   z-index: 2;
   width: 23px;
@@ -2302,7 +2302,7 @@ button.ui-button::-moz-focus-inner {
   margin-left: -8px;
   top: 50%;
   margin-top: -8px;
-  background: url(/aubgquest/assets/rails_admin/aristo/images/icon_sprite.png) no-repeat;
+  background: url(/assets/rails_admin/aristo/images/icon_sprite.png) no-repeat;
 }
 
 /* line 645, /Users/Spawns/.rvm/gems/ruby-2.3.0/gems/rails_admin-0.8.1/app/assets/stylesheets/rails_admin/aristo/jquery-ui-1.8.7.custom.scss */
@@ -2552,14 +2552,14 @@ button.ui-button::-moz-focus-inner {
 .ui-progressbar {
   height: 12px;
   text-align: left;
-  background: white url(/aubgquest/assets/rails_admin/aristo/images/progress_bar.gif) 0 -14px repeat-x;
+  background: white url(/assets/rails_admin/aristo/images/progress_bar.gif) 0 -14px repeat-x;
 }
 
 /* line 706, /Users/Spawns/.rvm/gems/ruby-2.3.0/gems/rails_admin-0.8.1/app/assets/stylesheets/rails_admin/aristo/jquery-ui-1.8.7.custom.scss */
 .ui-progressbar .ui-progressbar-value {
   margin: -1px;
   height: 100%;
-  background: url(/aubgquest/assets/rails_admin/aristo/images/progress_bar.gif) 0 0 repeat-x;
+  background: url(/assets/rails_admin/aristo/images/progress_bar.gif) 0 0 repeat-x;
 }
 
 /* Extra Input Field Styling */
@@ -2971,46 +2971,46 @@ button.ui-button::-moz-focus-inner {
 /* line 50, /Users/Spawns/.rvm/gems/ruby-2.3.0/gems/rails_admin-0.8.1/app/assets/stylesheets/rails_admin/ra.filtering-multiselect.scss */
 .ra-multiselect .ui-icon.ui-icon-circle-triangle-e {
   background-position: -16px -32px !important;
-  background-image: url(/aubgquest/assets/rails_admin/multiselect/icon_sprite.png);
+  background-image: url(/assets/rails_admin/multiselect/icon_sprite.png);
 }
 /* line 54, /Users/Spawns/.rvm/gems/ruby-2.3.0/gems/rails_admin-0.8.1/app/assets/stylesheets/rails_admin/ra.filtering-multiselect.scss */
 .ra-multiselect .ui-icon.ui-icon-circle-triangle-e:hover {
   background-position: -16px -48px !important;
-  background-image: url(/aubgquest/assets/rails_admin/multiselect/icon_sprite.png);
+  background-image: url(/assets/rails_admin/multiselect/icon_sprite.png);
 }
 /* line 58, /Users/Spawns/.rvm/gems/ruby-2.3.0/gems/rails_admin-0.8.1/app/assets/stylesheets/rails_admin/ra.filtering-multiselect.scss */
 .ra-multiselect .ui-icon.ui-icon-circle-triangle-w {
   background-position: 0px -32px !important;
-  background-image: url(/aubgquest/assets/rails_admin/multiselect/icon_sprite.png);
+  background-image: url(/assets/rails_admin/multiselect/icon_sprite.png);
 }
 /* line 62, /Users/Spawns/.rvm/gems/ruby-2.3.0/gems/rails_admin-0.8.1/app/assets/stylesheets/rails_admin/ra.filtering-multiselect.scss */
 .ra-multiselect .ui-icon.ui-icon-circle-triangle-w:hover {
   background-position: 0px -48px !important;
-  background-image: url(/aubgquest/assets/rails_admin/multiselect/icon_sprite.png);
+  background-image: url(/assets/rails_admin/multiselect/icon_sprite.png);
 }
 /* line 66, /Users/Spawns/.rvm/gems/ruby-2.3.0/gems/rails_admin-0.8.1/app/assets/stylesheets/rails_admin/ra.filtering-multiselect.scss */
 .ra-multiselect .ui-icon.ui-icon-circle-triangle-n {
   background-position: 0px 0px !important;
   margin-left: 1px;
-  background-image: url(/aubgquest/assets/rails_admin/multiselect/ui-icon-circle-triangle-n-light.png);
+  background-image: url(/assets/rails_admin/multiselect/ui-icon-circle-triangle-n-light.png);
 }
 /* line 71, /Users/Spawns/.rvm/gems/ruby-2.3.0/gems/rails_admin-0.8.1/app/assets/stylesheets/rails_admin/ra.filtering-multiselect.scss */
 .ra-multiselect .ui-icon.ui-icon-circle-triangle-n:hover {
   background-position: 0px 0px !important;
   margin-left: 1px;
-  background-image: url(/aubgquest/assets/rails_admin/multiselect/ui-icon-circle-triangle-n-dark.png);
+  background-image: url(/assets/rails_admin/multiselect/ui-icon-circle-triangle-n-dark.png);
 }
 /* line 76, /Users/Spawns/.rvm/gems/ruby-2.3.0/gems/rails_admin-0.8.1/app/assets/stylesheets/rails_admin/ra.filtering-multiselect.scss */
 .ra-multiselect .ui-icon.ui-icon-circle-triangle-s {
   background-position: 0px 0px !important;
   margin-left: 1px;
-  background-image: url(/aubgquest/assets/rails_admin/multiselect/ui-icon-circle-triangle-s-light.png);
+  background-image: url(/assets/rails_admin/multiselect/ui-icon-circle-triangle-s-light.png);
 }
 /* line 81, /Users/Spawns/.rvm/gems/ruby-2.3.0/gems/rails_admin-0.8.1/app/assets/stylesheets/rails_admin/ra.filtering-multiselect.scss */
 .ra-multiselect .ui-icon.ui-icon-circle-triangle-s:hover {
   background-position: 0px 0px !important;
   margin-left: 1px;
-  background-image: url(/aubgquest/assets/rails_admin/multiselect/ui-icon-circle-triangle-s-dark.png);
+  background-image: url(/assets/rails_admin/multiselect/ui-icon-circle-triangle-s-dark.png);
 }
 
 /* line 1, /Users/Spawns/.rvm/gems/ruby-2.3.0/gems/rails_admin-0.8.1/app/assets/stylesheets/rails_admin/ra.widgets.scss */
@@ -3031,7 +3031,7 @@ iframe.wysihtml5-sandbox {
   position: relative;
   width: 36px;
   height: 36px;
-  background: url(/aubgquest/assets/rails_admin/colorpicker/select2.png);
+  background: url(/assets/rails_admin/colorpicker/select2.png);
 }
 
 /* line 9, /Users/Spawns/.rvm/gems/ruby-2.3.0/gems/rails_admin-0.8.1/app/assets/stylesheets/rails_admin/jquery.colorpicker.scss */
@@ -3041,7 +3041,7 @@ iframe.wysihtml5-sandbox {
   left: 3px;
   width: 30px;
   height: 30px;
-  background: url(/aubgquest/assets/rails_admin/colorpicker/select2.png) center;
+  background: url(/assets/rails_admin/colorpicker/select2.png) center;
 }
 
 /* line 18, /Users/Spawns/.rvm/gems/ruby-2.3.0/gems/rails_admin-0.8.1/app/assets/stylesheets/rails_admin/jquery.colorpicker.scss */
@@ -3050,7 +3050,7 @@ iframe.wysihtml5-sandbox {
   height: 176px;
   overflow: hidden;
   position: absolute;
-  background: url(/aubgquest/assets/rails_admin/colorpicker/custom_background.png);
+  background: url(/assets/rails_admin/colorpicker/custom_background.png);
   font-family: Arial, Helvetica, sans-serif;
   display: none;
   z-index: 11000;
@@ -3076,7 +3076,7 @@ iframe.wysihtml5-sandbox {
   left: 0;
   width: 150px;
   height: 150px;
-  background: url(/aubgquest/assets/rails_admin/colorpicker/colorpicker_overlay.png);
+  background: url(/assets/rails_admin/colorpicker/colorpicker_overlay.png);
 }
 
 /* line 46, /Users/Spawns/.rvm/gems/ruby-2.3.0/gems/rails_admin-0.8.1/app/assets/stylesheets/rails_admin/jquery.colorpicker.scss */
@@ -3087,7 +3087,7 @@ iframe.wysihtml5-sandbox {
   width: 11px;
   height: 11px;
   overflow: hidden;
-  background: url(/aubgquest/assets/rails_admin/colorpicker/colorpicker_select.gif);
+  background: url(/assets/rails_admin/colorpicker/colorpicker_select.gif);
   margin: -5px 0 0 -5px;
 }
 
@@ -3107,7 +3107,7 @@ iframe.wysihtml5-sandbox {
   width: 35px;
   height: 9px;
   overflow: hidden;
-  background: url(/aubgquest/assets/rails_admin/colorpicker/custom_indic.gif) left top;
+  background: url(/assets/rails_admin/colorpicker/custom_indic.gif) left top;
   margin: -4px 0 0 0;
   left: 0px;
 }
@@ -3155,7 +3155,7 @@ iframe.wysihtml5-sandbox {
   position: absolute;
   width: 72px;
   height: 22px;
-  background: url(/aubgquest/assets/rails_admin/colorpicker/custom_hex.png) top;
+  background: url(/assets/rails_admin/colorpicker/custom_hex.png) top;
   left: 212px;
   top: 142px;
 }
@@ -3186,42 +3186,42 @@ iframe.wysihtml5-sandbox {
 
 /* line 131, /Users/Spawns/.rvm/gems/ruby-2.3.0/gems/rails_admin-0.8.1/app/assets/stylesheets/rails_admin/jquery.colorpicker.scss */
 .colorpicker_rgb_r {
-  background-image: url(/aubgquest/assets/rails_admin/colorpicker/custom_rgb_r.png);
+  background-image: url(/assets/rails_admin/colorpicker/custom_rgb_r.png);
   top: 52px;
   left: 212px;
 }
 
 /* line 136, /Users/Spawns/.rvm/gems/ruby-2.3.0/gems/rails_admin-0.8.1/app/assets/stylesheets/rails_admin/jquery.colorpicker.scss */
 .colorpicker_rgb_g {
-  background-image: url(/aubgquest/assets/rails_admin/colorpicker/custom_rgb_g.png);
+  background-image: url(/assets/rails_admin/colorpicker/custom_rgb_g.png);
   top: 82px;
   left: 212px;
 }
 
 /* line 141, /Users/Spawns/.rvm/gems/ruby-2.3.0/gems/rails_admin-0.8.1/app/assets/stylesheets/rails_admin/jquery.colorpicker.scss */
 .colorpicker_rgb_b {
-  background-image: url(/aubgquest/assets/rails_admin/colorpicker/custom_rgb_b.png);
+  background-image: url(/assets/rails_admin/colorpicker/custom_rgb_b.png);
   top: 112px;
   left: 212px;
 }
 
 /* line 146, /Users/Spawns/.rvm/gems/ruby-2.3.0/gems/rails_admin-0.8.1/app/assets/stylesheets/rails_admin/jquery.colorpicker.scss */
 .colorpicker_hsb_h {
-  background-image: url(/aubgquest/assets/rails_admin/colorpicker/custom_hsb_h.png);
+  background-image: url(/assets/rails_admin/colorpicker/custom_hsb_h.png);
   top: 52px;
   left: 282px;
 }
 
 /* line 151, /Users/Spawns/.rvm/gems/ruby-2.3.0/gems/rails_admin-0.8.1/app/assets/stylesheets/rails_admin/jquery.colorpicker.scss */
 .colorpicker_hsb_s {
-  background-image: url(/aubgquest/assets/rails_admin/colorpicker/custom_hsb_s.png);
+  background-image: url(/assets/rails_admin/colorpicker/custom_hsb_s.png);
   top: 82px;
   left: 282px;
 }
 
 /* line 156, /Users/Spawns/.rvm/gems/ruby-2.3.0/gems/rails_admin-0.8.1/app/assets/stylesheets/rails_admin/jquery.colorpicker.scss */
 .colorpicker_hsb_b {
-  background-image: url(/aubgquest/assets/rails_admin/colorpicker/custom_hsb_b.png);
+  background-image: url(/assets/rails_admin/colorpicker/custom_hsb_b.png);
   top: 112px;
   left: 282px;
 }
@@ -3232,7 +3232,7 @@ iframe.wysihtml5-sandbox {
   position: absolute;
   width: 22px;
   height: 22px;
-  background: url(/aubgquest/assets/rails_admin/colorpicker/custom_submit.png) top;
+  background: url(/assets/rails_admin/colorpicker/custom_submit.png) top;
   left: 322px;
   top: 142px;
   overflow: hidden;
@@ -3267,8 +3267,8 @@ iframe.wysihtml5-sandbox {
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url("/aubgquest/assets/fontawesome-webfont.eot?v=4.5.0");
-  src: url("/aubgquest/assets/fontawesome-webfont.eot?#iefix&v=4.5.0") format("embedded-opentype"), url("/aubgquest/assets/fontawesome-webfont.woff2?v=4.5.0") format("woff2"), url("/aubgquest/assets/fontawesome-webfont.woff?v=4.5.0") format("woff"), url("/aubgquest/assets/fontawesome-webfont.ttf?v=4.5.0") format("truetype"), url("/aubgquest/assets/fontawesome-webfont.svg?v=4.5.0#fontawesomeregular") format("svg");
+  src: url("/assets/fontawesome-webfont.eot?v=4.5.0");
+  src: url("/assets/fontawesome-webfont.eot?#iefix&v=4.5.0") format("embedded-opentype"), url("/assets/fontawesome-webfont.woff2?v=4.5.0") format("woff2"), url("/assets/fontawesome-webfont.woff?v=4.5.0") format("woff"), url("/assets/fontawesome-webfont.ttf?v=4.5.0") format("truetype"), url("/assets/fontawesome-webfont.svg?v=4.5.0#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal;
 }

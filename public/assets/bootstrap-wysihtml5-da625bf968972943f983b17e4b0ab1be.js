@@ -9975,7 +9975,7 @@ wysihtml5.views.Textarea = wysihtml5.views.View.extend(
                 "pre": 1
             }
         },
-        stylesheets: ["/aubgquest/assets/bootstrap-wysihtml5/wysiwyg-color.css"], // (path_to_project/lib/css/wysiwyg-color.css)
+        stylesheets: ["/assets/bootstrap-wysihtml5/wysiwyg-color.css"], // (path_to_project/lib/css/wysiwyg-color.css)
         locale: "en"
     };
 
