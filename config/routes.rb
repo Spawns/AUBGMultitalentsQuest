@@ -1,12 +1,10 @@
 Rails.application.routes.draw do
 
-
     devise_for :users, controllers: { :registrations => 'users/registrations' , :sessions => 'users/sessions', confirmations: 'users/confirmations'}
     devise_for :admins, controllers: {:sessions => 'admins/sessions'}
 
     root 'root#index'
     get 'videos/:id', to: 'root#show_video' , as: 'show_video'
-
     namespace 'application_process' do
       get '', to: 'dashboard#index', as: '/'
       get 'status', to: 'applications#show_status' , as: 'status'
@@ -51,6 +49,5 @@ Rails.application.routes.draw do
       resources :pages
       mount Ckeditor::Engine => '/ckeditor'
     end
-
 
 end
