@@ -20,7 +20,7 @@
       .large-12.columns.news-container
         - @posts.each do |post|
           .news-item.wow.slideInLeft
-            %a{:href => "https://www.facebook.com/AUBGcurious/posts/#{post['id'].slice(16..-1)}"}
+            %a{:href => "#{AppConfig.fb_url}posts/#{post['id'].slice(16..-1)}"}
               -if post['message']
                 %h6
                   %small
