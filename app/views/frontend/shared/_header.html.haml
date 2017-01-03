@@ -1,4 +1,14 @@
 %div{:class=> ("sticky" unless !active?(root_path))}
+  %nav.top-bar{:style => 'background-color: rgb(244, 30, 20); min-width: 100%;'}
+    %ul.title-area{ :style => 'z-index:999;'}
+      %li.name{:style => "padding-left: 10px;"}
+        %h1
+          = link_to image_tag("headerlogo.png"), "https://www.aubg.edu"
+    %section.top-bar-section{:style => "padding-left: 300px; display: table-cell; vertical-align: middle;"}
+      %ul.right
+        = link_to  "ADMISSION" , "https://www.aubg.edu/admissions", {:style=>'color:#FFFFFF; margin-left: 10px; margin-right: 10px; font-size: 20px; display: inline-block;'}
+        = link_to  "ACADEMIC QUALITY" , "https://www.aubg.edu/academics-bachelor-degrees" , {:style=>'color:#FFFFFF; margin-left: 10px; margin-right: 10px; font-size: 20px; display: inline-block;'}
+        = link_to  "STUDENT LIFE" , "https://www.aubg.edu/student-life", {:style=>'color:#FFFFFF; margin-left: 10px; margin-right: 10px; font-size: 20px; display: inline-block;'}
   %nav.top-bar{"data-topbar" => "", :role => "navigation" , :id => "access"}
     %ul.title-area{ :style => 'z-index:999;'}
       %li.name{:style => "padding-left: 10px;"}

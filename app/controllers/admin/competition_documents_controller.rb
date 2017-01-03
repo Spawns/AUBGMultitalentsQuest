@@ -1,4 +1,4 @@
-class Admin::CompetitionDocumentsController < Admin::ApplicationController
+ class Admin::CompetitionDocumentsController < Admin::ApplicationController
   before_action :authenticate_admin!
   layout 'configuration'
   skip_before_filter :verify_authenticity_token, :only => :create

@@ -23,7 +23,7 @@
             .medium-2.columns
               =render 'show_field' , :attrib => @application.city, :attrib_name=> "City:"
     .row
-      .medium-12.columns
+      .medium-15.columns
         %h3.subheader
           Education Information
         .panel
@@ -35,10 +35,15 @@
             .medium-3.columns
               =render 'show_field' , :attrib => @application.school_region, :attrib_name=> "School region:"
             .medium-3.columns
+              =render 'show_field' , :attrib => @application.grade, :attrib_name=> "Grade:"
+            .medium-3.columns
               =render 'show_field' , :attrib => @application.high_school_grade, :attrib_name=> "High school grade:"
           .row
             .medium-12.columns
               =image_tag(@application.gradebook_photo.url(:medium))
+          .row
+            .medium-12.columns
+              =image_tag(@application.toefl(:medium))
     .row
       .medium-12.columns
         %h3.subheader
