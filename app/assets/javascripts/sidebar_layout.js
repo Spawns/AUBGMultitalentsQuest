@@ -21,7 +21,7 @@ $(document).ready(function(){
 });
 
 $(document).on('scroll', ( function(){
-    var headerHeight = $('.top-bar').height() + $('.breadcrumb-container').height();
+    var headerHeight = $('.full-heder').height() + $('.breadcrumb-container').height();
     var scrollTopHeight = $(document).scrollTop();
     var sidebarHeight = $('.sidebar-lg').outerHeight(true) + $('.side-nav').outerHeight(true);
 
