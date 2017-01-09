@@ -1,11 +1,11 @@
 %footer.footer{:style => "height:50vh;"}
   .three.spacing
   .row.full-width
-    .large-4.medium-4.columns
+    .large-3.medium-3.columns
       %h1.logo
         %a= link_to image_tag("footerlogo.png") , root_path
       .spacing
-    .large-4.medium-4.columns
+    .large-3.medium-3.columns
       .spacing
       .links.inline-list
         %h4
@@ -13,23 +13,22 @@
         %ul
           -#%p= link_to  "Agenda" , frontend_agenda_path
           -#%p= link_to  "Accommodation" , frontend_accommodation_path
-          %p= link_to  "Rules" , frontend_rules_path
+          %p= link_to  "Rules 1" , frontend_rules_path
+          %p= link_to  "Rules 2" , frontend_rules1_path
+      .spacing
+    .large-3.medium-3.columns
+      .spacing
+      .links.inline-list
+        %ul
+          -#%p= link_to "Finalists" , frontend_finalists_path
+          -#%p= link_to "Supporters" , frontend_partners_path
           %p= link_to  "Competition Documents" , frontend_competition_documents_path
           %p= link_to "Contact us" , new_frontend_contact_form_path
       .spacing
-    -#.large-3.medium-3.columns
-    -#  .spacing
-    -#-#  .links.inline-list
-    -#-#    %ul
-    -#-#      -#%p= link_to "Finalists" , frontend_finalists_path
-    -#-#      -#%p= link_to "Supporters" , frontend_partners_path
-    -#-#      %p= link_to "Contact us" , new_frontend_contact_form_path
-    -#  .spacing
-    .large-4.medium-4.columns
+    .large-3.medium-3.columns
       .spacing
         .row
-          .large-6.medium-6.columns
-          .large-6.medium-6.columns
+          .large-12.medium-12.columns
             .spacing
             .share-icons.buildingblocks
               %a{:href => "#{AppConfig.fb_url}"}
