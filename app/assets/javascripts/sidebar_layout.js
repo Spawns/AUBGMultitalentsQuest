@@ -28,5 +28,5 @@ $(document).on('scroll', ( function(){
     $('.sidebar-lg').css('top' , headerHeight - scrollTopHeight > 0 ? headerHeight - scrollTopHeight : 0);
 
     if ($(document).height() - scrollTopHeight - $('.footer').outerHeight() < sidebarHeight)
-    $('.sidebar-lg').css('top' , $(document).height() - scrollTopHeight - $('.footer').outerHeight() - sidebarHeight);
+        $('.sidebar-lg').css('top' , $(document).height() - scrollTopHeight - $('.footer').outerHeight() - sidebarHeight);
 }));
