@@ -9,7 +9,7 @@ class RootController < ApplicationController
      fboauth = Koala::Facebook::OAuth.new(ENV['FACEBOOK_KEY'], ENV['FACEBOOK_SECRET'])
      fbgraph = Koala::Facebook::API.new( fboauth.get_app_access_token)
      @posts = fbgraph.get_connections("1897955503824222" , "posts" , {"limit" => "7"})
-
+     @posts1 = fbgraph.get_connections("1126996314079508" , "posts" , {"limit" => "7"})
       #YT
      channel = Yt::Channel.new url: "https://www.youtube.com/user/AUBG1991"
      @videos = channel.videos.first(4)
