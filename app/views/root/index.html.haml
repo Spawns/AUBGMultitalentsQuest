@@ -11,7 +11,7 @@
               high-schools in Bulgaria with intermediate-level communication skills in English,
               broad general education background, talents in multiple academic, creative, and athletic disciplines.
   .row.collapse.full-width{:data=>{'equalizer' => true}}
-    .large-7.columns.news-section{:data=>{'equalizer-watch'=> true}}
+    .large-6.columns.news-section{:data=>{'equalizer-watch'=> true}}
       %h2.landing-page-heading#news.features.wow.fadeInleft{:style => "margin-top:0; margin-bottom:0;"}
         News
       .large-12.columns.news-container
@@ -23,13 +23,13 @@
                   =DateTime.parse(post['created_time']).strftime('%a %d %b %Y')
               %p
                 =post['message']
-    .large-5.columns.news-section{:data=>{'equalizer-watch'=> true}}
+    .large-6.columns.news-section{:data=>{'equalizer-watch'=> true}}
       %h2.landing-page-heading#news.features.wow.fadeInleft{:style => "margin-top:0; margin-bottom:0;"}
         Facebook Feed
       .large-12.columns.news-container
         - @posts.each do |post|
           .news-item.wow.slideInLeft
-            %a{:href => "https://www.facebook.com/AUBGMultiTalentQuest/posts/#{post['id'].slice(16..-1)}"}
+            %a{:href => "https://www.facebook.com/AUBGMultiTalentQuest/posts/#{post['id'].slice(17..-1)}"}
               -if post['message']
                 %h6
                   %small
