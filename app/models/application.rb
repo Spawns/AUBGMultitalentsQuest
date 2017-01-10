@@ -65,7 +65,7 @@ before_save :default_values
     #check attributes to see if the application is completed
     def check_attributes
      self.attributes.each do |attr_name , attr_value|
-       if attr_value.blank? || attr_value.nil?
+       if (attr_value.blank? || attr_value.nil?) && attr_name != "further_info"
         return false
        end
      end
