@@ -1,8 +1,8 @@
 #Don't create more than one app config!
 AppConfig.create(
     {
-        keywords: 'Liberal arts competition' ,
-        description: 'Annual liberal arts competition',
+        keywords: 'AUBG MultiTalent Quest Competition' ,
+        description: 'AUBG MultiTalent Quest Competition',
         yt_url: 'youtube.com' ,
         tw_url: 'twitter.com' ,
         fb_url: 'facbook.com' ,

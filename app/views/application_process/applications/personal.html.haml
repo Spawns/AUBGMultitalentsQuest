@@ -1,7 +1,7 @@
 .row
   .large-12.columns.fixed-height
     %fieldset
-      %legend Liberal Arts Application Form
+      %legend AUBG MultiTalent Quest Application From
       = render partial: 'application_steps_links'
       = simple_form_for @application , url: wizard_path do |f|
         = f.input :name , label: 'Full name'  , :required => true

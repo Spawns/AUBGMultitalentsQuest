@@ -1,10 +1,10 @@
 .row
   .large-12.columns.fixed-height
     %fieldset
-      %legend Liberal Arts Application Form
+      %legend AUBG MultiTalent Quest Application From
       = render partial: 'application_steps_links'
       = simple_form_for @application , url: wizard_path do |f|
-        = f.input :video_url, :label => "Tell us who you are in a creative 2-minute CV-Video, ppload it on YouTube and share the link with us."
+        = f.input :video_url, :label => "Show us who you are in a Creative 2-minute CV-Video. Shoot it with a smartphone or a camera, upload it on YouTube, and share the link with us. For some “Tips and Tricks for the 2-minute Creative Video-CV”, click „Rules“, then „Round 1“ in the main menu of the website."
         = button_tag( :class => "button") do
           Next
           %i.fi-arrow-right

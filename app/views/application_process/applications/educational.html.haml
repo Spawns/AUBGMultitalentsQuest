@@ -1,17 +1,15 @@
 .row
   .large-12.columns.fixed-height
     %fieldset
-      %legend Liberal Arts Application Form
+      %legend AUBG MultiTalent Quest Application From
       = render partial: 'application_steps_links'
       = simple_form_for @application , url: wizard_path do |f|
         = f.input :school
         = f.input :school_town
         = f.input :school_region
-        = f.label :grade
-        = f.collection_radio_buttons( :grade, [["11", 11 ], ["12", 12]], :first, :last, label: "Grade", checked: @application.grade , item_wrapper_class: :block_radio_button_collection)
         = f.input :high_school_grade, :label => "Please calculate the average of your GPAs (average grade) from 9th and 10th grade:"
         = f.input :gradebook_photo, :label => "Please, upload a transcript or a scanned copy of your school gradebooks showing your GPA from 9th and 10th grade. (size limit is 1 MB)"
-        = f.input :toefl, :label => "Please upload a photo of your TOEFL score (optional)"
+        = f.input :toefl, :label => "Please upload a copy of your score of TOEFL (IBT, PBT), IELTS, CPE, CAE, ECPE, PTE Academic, SAT or ACT certificates (optional)"
         = button_tag( :class => "button") do
           Next
           %i.fi-arrow-right

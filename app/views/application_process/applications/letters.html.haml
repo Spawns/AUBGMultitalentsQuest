@@ -1,12 +1,13 @@
 .row
   .large-12.columns.fixed-height
     %fieldset
-      %legend Liberal Arts Application Form
+      %legend AUBG MultiTalent Quest Application From
       = render partial: 'application_steps_links'
       = simple_form_for @application , url: wizard_path , :html => {:'data-abide' => 'true'} do |f|
         = f.input :photo, :label => "Portrait photo (size limit is 1 MB)"
         = f.input :facebook, :label => "Link to Facebook profile(URL)"
         = f.input :favourite_subject,:label => "What are your favorite school subjects and why? (max. 50 words)" , :input_html => {:rows => 3}
+        = f.input :achievements,:label => "Tell us something more about your achievements and talents? Don’t be too modest, mention any awards or distinctions you have received. (max. 100 words)" , :input_html => {:rows => 3}
         = f.input :self_describe,:label => "Describe yourself in three words for your public profile."
         = f.input :learned_from, :label => "How did you find out about the AUBG MultiTalent Quest?" , collection: [['From my school ', 'From my school '] , ['From an organizer' , 'From an organizer'], ['From a friend' , 'From a friend'] , ['From the social networks' , 'From the social networks'] , ['From the media' , 'From the media'] ,['From AUBG', 'From AUBG'],  ['Other' , 'Other'] ]
         = button_tag( :class => "button") do

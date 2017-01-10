@@ -26,10 +26,11 @@ before_save :default_values
   validates :name, :dob, :gender, :mobile_phone, :current_address, :city, :terms_of_service, :presence => true, :on => :update, :if => :active_or_personal?
   validates :name, format: { with: /\A[a-zA-Z ]+\z/, message: "allows only letters" }, :on => :update, :if => :active_or_personal?
   validates :mobile_phone, format: { with: /\d[0-9]\)*\z/, message: "allows only numbers" }, :on => :update, :if => :active_or_personal?
-  validates :high_school_grade, :gradebook_photo, :grade, :school, :school_region, :school_town, :on => :update, :presence => true, :if => :active_or_educational?
+  validates :high_school_grade, :gradebook_photo, :school, :school_region, :school_town, :on => :update, :presence => true, :if => :active_or_educational?
   validates :school, :school_region, :school_town, :on => :update, format: { with: /\A[a-zA-Z ]+\z/, message: "allows only letters" }, :if => :active_or_educational?
-  validates :favourite_subject, :self_describe, :learned_from, :photo, :facebook, :presence => true, :on => :update,  :if => :active_or_letters?
+  validates :favourite_subject, :achievements, :self_describe, :learned_from, :photo, :facebook, :presence => true, :on => :update,  :if => :active_or_letters?
   validates_length_of :favourite_subject, :maximum => 70, :too_short => "Your favourite subject description must be at most 50 words.", :tokenizer => lambda {|str| str.scan(/\w+/) }, :on => :update,  :if => :active_or_letters?
+  validates_length_of :achievements, :maximum => 130, :too_short => "The description of your achievements must be at most 100 words.", :tokenizer => lambda {|str| str.scan(/\w+/) }, :on => :update,  :if => :active_or_letters?
   validates :video_url,  :presence => true, :on => :update,  :if => :active_or_video?
 
   def active?
