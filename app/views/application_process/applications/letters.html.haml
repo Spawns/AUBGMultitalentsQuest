@@ -4,7 +4,7 @@
       %legend AUBG MultiTalent Quest Application From
       = render partial: 'application_steps_links'
       = simple_form_for @application , url: wizard_path , :html => {:'data-abide' => 'true'} do |f|
-        = f.input :photo, :label => "Portrait photo (size limit is 1 MB)"
+        = f.input :photo, :label => "Portrait photo (size limit is 5 MB)"
         = f.input :facebook, :label => "Link to Facebook profile(URL)"
         = f.input :favourite_subject,:label => "What are your favorite school subjects and why? (max. 50 words)" , :input_html => {:rows => 3}
         = f.input :achievements,:label => "Tell us something more about your achievements and talents? Don’t be too modest, mention any awards or distinctions you have received. (max. 100 words)" , :input_html => {:rows => 3}
