@@ -62,12 +62,13 @@ before_save :default_values
     def default_values
        self.status ||= "incomplete"
     end
+
     #check attributes to see if the application is completed
     def check_attributes
      self.attributes.each do |attr_name , attr_value|
-       if (attr_value.blank? || attr_value.nil?) && attr_name != "further_info"
+      if (attr_value.blank? || attr_value.nil?) && (attr_name != "further_info") && !(attr_name.include? "toefl")
         return false
-       end
+      end
      end
     end
 
