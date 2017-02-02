@@ -23,13 +23,10 @@
           -#%li.has-dropdown
           -#  = link_to "Competition #{conf_start('year')}" , "#"
           -#  %ul.dropdown
-          %li.has-dropdown
-            = link_to "Rules" , "#"
-            %ul.dropdown
-              %li
-                = link_to  "Round 1" , frontend_rules_path
-              %li
-                = link_to  "Round 2" , frontend_rules1_path
+          %li
+            = link_to  "Round 1" , frontend_rules_path
+          %li
+            = link_to  "Round 2" , frontend_rules1_path
           -#%li
           -#  = link_to  "Agenda" , frontend_agenda_path
           -#%li
