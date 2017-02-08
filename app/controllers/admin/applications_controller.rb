@@ -8,7 +8,7 @@ class Admin::ApplicationsController < ApplicationController
   def index
     case params[:type]
       when 'submitted'
-        @applications = Application.submitted.paginate(page: params[:page], :per_page => 10).order('created_at DESC')
+        @applications = Application.submitted.paginate(page: params[:page], :per_page => 10)
       when 'incomplete'
         @applications = Application.incomplete.paginate(page: params[:page], :per_page => 10).order('created_at DESC')
       when 'accepted'
